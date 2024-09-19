@@ -1,6 +1,6 @@
 ---
 title: Python
-description: Python语言类型Rainbond支持规范介绍
+description: Python语言类型应用上云平台支持规范介绍
 ---
 
 #### Python 语言识别策略
@@ -15,11 +15,11 @@ description: Python语言类型Rainbond支持规范介绍
 
 #### Python 项目源码规范
 
-在此步骤中，你需要提供一个可用的 Python 源码程序用来部署在 Rainbond 平台上,此应用程序至少需要满足如下条件:
+在此步骤中，你需要提供一个可用的 Python 源码程序用来部署在 应用上云平台 平台上,此应用程序至少需要满足如下条件:
 
 - 本地可以正常运行部署的 Python 程序
 - 项目可以托管到 git 仓库
-- 项目根目录下必须存在 `requirements.txt` ,用来管理 Python 项目的依赖,也是 Rainbond 识别为 Python 语言的必要条件
+- 项目根目录下必须存在 `requirements.txt` ,用来管理 Python 项目的依赖,也是 应用上云平台 识别为 Python 语言的必要条件
 - 项目根目录下需要定义 `Procfile` ,用来定义程序启动方式
 - 项目根目录下存在 `runtime.txt` ,用来定义当前项目的 Python 使用版本
 
@@ -49,7 +49,7 @@ web: gunicorn app:app --log-file - --access-logfile - --error-logfile -
 
 ##### 配置 Python 版本
 
-推荐通过代码根目录下的 `runtime.txt` 文件来定义 `Python` 版本,若未定义,Rainbond 将会默认使用 `python-3.6.6` 版本。
+推荐通过代码根目录下的 `runtime.txt` 文件来定义 `Python` 版本,若未定义,应用上云平台 将会默认使用 `python-3.6.6` 版本。
 
 ```bash
 $ cat runtime.txt

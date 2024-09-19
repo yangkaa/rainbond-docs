@@ -1,6 +1,6 @@
 ---
 title: PHP
-description: PHP语言类型Rainbond支持规范介绍
+description: PHP语言类型应用上云平台支持规范介绍
 ---
 
 #### PHP 语言识别策略
@@ -39,12 +39,12 @@ composer install --no-dev --prefer-dist --optimize-autoloader --no-interaction
 
 #### PHP 项目源码规范
 
-在此步骤中，你需要提供一个可用的 PHP 源码程序用来部署在 Rainbond 平台上,此应用程序至少需要满足如下条件:
+在此步骤中，你需要提供一个可用的 PHP 源码程序用来部署在 应用上云平台 平台上,此应用程序至少需要满足如下条件:
 
 1. 本地可以正常运行的 PHP 程序
 2. 源码程序必须托管在 gitlab 等相关 git 或者 svn 服务上
 3. 源码程序根目录下必须需要存在 php 文件
-4. 源码程序根目录下必须存在 `composer.json`,用来管理 PHP 项目的依赖,也是 Rainbond 识别为 PHP 语言的必要条件,同时文件中必须定义项目需要的 php 版本，定义方式见下文。
+4. 源码程序根目录下必须存在 `composer.json`,用来管理 PHP 项目的依赖,也是 应用上云平台 识别为 PHP 语言的必要条件,同时文件中必须定义项目需要的 php 版本，定义方式见下文。
 5. 源码程序项目根目录下必须存在 `composer.lock` 文件
 6. 源码程序项目根目录下需要定义 `Procfile` ,用来定义程序启动方式
 
@@ -131,7 +131,7 @@ PHP 的版本支持 ~5.5.35 这种 [Semantic Versioning](http://semver.org/) 的
 
 ##### PHP 5.6
 
-在 Rainbond 上自动启用以下内置扩展(此列表不包括默认情况下 PHP 启用的扩展，例如 [DOM](http://php.net/manual/book.dom)，[JSON](http://php.net/manual/book.json)，[PCRE](http://php.net/manual/book.pcre) 或 [PDO](http://php.net/manual/book.pdo)):
+在 应用上云平台 上自动启用以下内置扩展(此列表不包括默认情况下 PHP 启用的扩展，例如 [DOM](http://php.net/manual/book.dom)，[JSON](http://php.net/manual/book.json)，[PCRE](http://php.net/manual/book.pcre) 或 [PDO](http://php.net/manual/book.pdo)):
 
 - [Bzip2](http://php.net/manual/book.bzip2)
 - [cURL](http://php.net/manual/book.curl)
@@ -190,7 +190,7 @@ PHP 的版本支持 ~5.5.35 这种 [Semantic Versioning](http://semver.org/) 的
 
 ##### PHP 7.0
 
-在 Rainbond 上自动启用以下内置扩展(此列表不包括默认情况下 PHP 启用的扩展，例如 [DOM](http://php.net/manual/book.dom)，[JSON](http://php.net/manual/book.json)，[PCRE](http://php.net/manual/book.pcre) 或 [PDO](http://php.net/manual/book.pdo)):
+在 应用上云平台 上自动启用以下内置扩展(此列表不包括默认情况下 PHP 启用的扩展，例如 [DOM](http://php.net/manual/book.dom)，[JSON](http://php.net/manual/book.json)，[PCRE](http://php.net/manual/book.pcre) 或 [PDO](http://php.net/manual/book.pdo)):
 
 - [Bzip2](http://php.net/manual/book.bzip2)
 - [cURL](http://php.net/manual/book.curl)
@@ -247,7 +247,7 @@ PHP 的版本支持 ~5.5.35 这种 [Semantic Versioning](http://semver.org/) 的
 
 ##### PHP 7.1
 
-在 Rainbond 上自动启用以下内置扩展(此列表不包括默认情况下 PHP 启用的扩展，例如 [DOM](http://php.net/manual/book.dom)，[JSON](http://php.net/manual/book.json)，[PCRE](http://php.net/manual/book.pcre) 或 [PDO](http://php.net/manual/book.pdo)):
+在 应用上云平台 上自动启用以下内置扩展(此列表不包括默认情况下 PHP 启用的扩展，例如 [DOM](http://php.net/manual/book.dom)，[JSON](http://php.net/manual/book.json)，[PCRE](http://php.net/manual/book.pcre) 或 [PDO](http://php.net/manual/book.pdo)):
 
 - [Bzip2](http://php.net/manual/book.bzip2)
 - [cURL](http://php.net/manual/book.curl)
@@ -305,7 +305,7 @@ PHP 的版本支持 ~5.5.35 这种 [Semantic Versioning](http://semver.org/) 的
 <!--
 ##### 默认扩展
 
-以下为Rainbond创建PHP应用时默认开启的扩展：
+以下为应用上云平台创建PHP应用时默认开启的扩展：
 
 - [Bzip2](http://docs.php.net/bzip2)
 - [cURL](http://docs.php.net/curl)

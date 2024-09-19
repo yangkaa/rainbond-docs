@@ -15,7 +15,7 @@ description: 讲述Java War包部署组件要点，适用于开发者和运维�
 
 ### War 项目源码规范
 
-在此步骤中，你需要提供一个可用的 Java War 源码程序用来部署在 Rainbond 平台上,此应用程序至少需要满足如下条件:
+在此步骤中，你需要提供一个可用的 Java War 源码程序用来部署在 应用上云平台 平台上,此应用程序至少需要满足如下条件:
 
 1. 本地可以正常运行的 War 包
 2. 源码程序必须托管在 gitlab 等相关 git 或者 svn 服务上(5.4 起支持下载压缩包构建)
@@ -49,7 +49,7 @@ web: java $JAVA_OPTS -jar ./webapp-runner.jar --port $PORT ./*.war
 
 #### OpenJDK 支持
 
-当前 Rainbond 支持 OpenJDK 如下版本为：
+当前 应用上云平台 支持 OpenJDK 如下版本为：
 
 - Java 1.6 - `1.6.0_27`
 - Java 1.7 - `1.7.0_95`
@@ -61,7 +61,7 @@ web: java $JAVA_OPTS -jar ./webapp-runner.jar --port $PORT ./*.war
 平台默认版本使用`1.8`。若需要使用其他版本的 OpenJDK，可以通过在源码根目录下添加`system.properties`文件来设定`java.runtime.version`的值来指定所需版本的 JDK。
 
 ```yaml
-# system.properties 目前Rainbond能识别的版本值为11,10,1.9,1.8,1.7,1.6
+# system.properties 目前应用上云平台能识别的版本值为11,10,1.9,1.8,1.7,1.6
 java.runtime.version=1.8
 ```
 
@@ -116,7 +116,7 @@ OracleJDK 下载地址格式要求: `http://<web服务URL>/jdk-8u201-linux-x64.t
 | 环境变量            | 默认值 | 说明                                 |
 | :------------------ | :----- | :----------------------------------- |
 | BUILD_WEBSERVER_URL |        | 自定义 WEBAPP-RUNNER 下载地址        |
-| BUILD_ONLINE        |        | 默认下载 Rainbond 内置 Webapp-Runner |
+| BUILD_ONLINE        |        | 默认下载 应用上云平台 内置 Webapp-Runner |
 
 ### 其他说明
 
@@ -134,5 +134,5 @@ OracleJDK 下载地址格式要求: `http://<web服务URL>/jdk-8u201-linux-x64.t
 - [Tomcat 配置 Redis 实现 Session 共享](./tomcat-redis-session)
 - [webapp-runner 使用说明](./webapp-runner/)
 
-<!-- - [RAINBOND 源码构建 JAVA 项目选取 JDK](../advanced-scenarios/devops/how-to-select-jdk/)
-- [Rainbond 源码构建 JAVA 项目配置 Maven 仓库](../advanced-scenarios/devops/how-to-config-maven/) -->
+<!-- - [应用上云平台 源码构建 JAVA 项目选取 JDK](../advanced-scenarios/devops/how-to-select-jdk/)
+- [应用上云平台 源码构建 JAVA 项目配置 Maven 仓库](../advanced-scenarios/devops/how-to-config-maven/) -->

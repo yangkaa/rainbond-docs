@@ -1,11 +1,11 @@
 ---
 title: Golang
-description: Golang语言类型Rainbond支持规范介绍
+description: Golang语言类型应用上云平台支持规范介绍
 ---
 
 ### Golang 语言识别方式
 
-当源代码根目录下存在 `go.mod` 文件，且不存在 `Dockerfile` 文件时，Rainbond 会将源代码识别为 `Golang` 项目。
+当源代码根目录下存在 `go.mod` 文件，且不存在 `Dockerfile` 文件时，应用上云平台 会将源代码识别为 `Golang` 项目。
 
 ### 编译原理
 
@@ -14,7 +14,7 @@ description: Golang语言类型Rainbond支持规范介绍
 
 ### Golang 项目源码规范
 
-在此步骤中，你需要提供一个可用的 Go 源码程序用来部署在 Rainbond 平台上,此应用程序至少需要满足如下条件:
+在此步骤中，你需要提供一个可用的 Go 源码程序用来部署在 应用上云平台 平台上,此应用程序至少需要满足如下条件:
 
 1. 本地可以正常运行的`go build`,`go run` 。
 

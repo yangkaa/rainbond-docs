@@ -50,7 +50,7 @@ kubectl get rainbondcluster rainbondcluster -n rbd-system -oyaml
 
 ### 所有 Pod 全部正常运行，也指定了 gatewayIngressIPs，但仍无法访问平台
 
-通常出现在多节点集群中，当你只指定了 gatewayIngressIPs，而没有指定网关节点时，Rainbond 会自动选择节点作为网关节点。此时你指定的gatewayIngressIPs 需要能将流量路由到 Rainbond 自动选择的网关节点上。否则将无法访问平台。你可以通过以下命令查看 Rainbond 自动选择的网关节点。
+通常出现在多节点集群中，当你只指定了 gatewayIngressIPs，而没有指定网关节点时，应用上云平台 会自动选择节点作为网关节点。此时你指定的gatewayIngressIPs 需要能将流量路由到 应用上云平台 自动选择的网关节点上。否则将无法访问平台。你可以通过以下命令查看 应用上云平台 自动选择的网关节点。
 
 ```bash
 kubectl get rainbondcluster rainbondcluster -n rbd-system -oyaml

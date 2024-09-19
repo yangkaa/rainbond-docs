@@ -1,6 +1,6 @@
 ---
 title: 更换构建类型
-description: 本文讲解基于Rainbond如何更换不同的构建源类型
+description: 本文讲解基于应用上云平台如何更换不同的构建源类型
 ---
 
 ### 概述

@@ -1,10 +1,10 @@
 ---
 title: Node.JS
-description: NodeJS语言类型Rainbond支持规范介绍
+description: NodeJS语言类型应用上云平台支持规范介绍
 ---
 
-Rainbond 5.1 版本已支持源码部署 NodeJS 前端类项目，你可以直接在 Rainbond 发布 Vue, React, Angular 等项目
-查看文档： [nodejs-static](./nodejs-static) 部署 NodeJS 前端项目到 Rainbond
+应用上云平台 5.1 版本已支持源码部署 NodeJS 前端类项目，你可以直接在 应用上云平台 发布 Vue, React, Angular 等项目
+查看文档： [nodejs-static](./nodejs-static) 部署 NodeJS 前端项目到 应用上云平台
 
 #### NodeJS 语言识别规范
 
@@ -18,11 +18,11 @@ Rainbond 5.1 版本已支持源码部署 NodeJS 前端类项目，你可以直�
 
 #### NodeJS 项目源码规范
 
-在此步骤中，你需要提供一个可用的 NodeJS 源码程序用来部署在 Rainbond 平台上,此应用程序至少需要满足如下条件:
+在此步骤中，你需要提供一个可用的 NodeJS 源码程序用来部署在 应用上云平台 平台上,此应用程序至少需要满足如下条件:
 
 1. 本地可以正常运行的 NodeJS 项目
 2. 源码程序必须托管在 gitlab 等相关 git 或者 svn 服务上
-3. 源码程序根路径下必须存在`package.json`,用来管理 NodeJS 项目的依赖,也是 Rainbond 识别为 NodeJS 语言的必要条件
+3. 源码程序根路径下必须存在`package.json`,用来管理 NodeJS 项目的依赖,也是 应用上云平台 识别为 NodeJS 语言的必要条件
 
 ##### Procfile 规范
 
@@ -41,7 +41,7 @@ web: npm start
 
 ##### Node 版本支持
 
-当前 Rainbond 支持 Node 如下版本为：
+当前 应用上云平台 支持 Node 如下版本为：
 
 ```
 4.9.1

@@ -14,7 +14,7 @@ description: 应用模版如何升级，升级的内容如何应用到基于应�
 
 ### 前提条件
 
-- 完成 [将应用发布为应用模版](use-manual/get-start/release-to-market/) ，拥有基于示例应用模版安装的应用 **复制出的应用**。
+- 完成 [将应用发布为应用模版](/use-manual/get-start/release-to-market/) ，拥有基于示例应用模版安装的应用 **复制出的应用**。
 
 - **源应用**（发布应用模版所使用的应用）有了新的变动，在本文档中，以添加服务组件 **Redis**，为例。
 
@@ -22,7 +22,7 @@ description: 应用模版如何升级，升级的内容如何应用到基于应�
 
 ### 应用模版的版本控制
 
-将源应用重新进行发布，在版本处，填入比原始版本更大的版本号，如 1.1。Rainbond 通过版本号数字的比较来区分版本的新旧。
+将源应用重新进行发布，在版本处，填入比原始版本更大的版本号，如 1.1。应用上云平台 通过版本号数字的比较来区分版本的新旧。
 
 <img src="https://grstatic.oss-cn-shanghai.aliyuncs.com/docs/5.2/get-start/upgrade-from-market/upgrade-from-market-2.png" title="重新发布与版本控制" width="100%" />
 
@@ -42,7 +42,7 @@ description: 应用模版如何升级，升级的内容如何应用到基于应�
 
 <img src="https://grstatic.oss-cn-shanghai.aliyuncs.com/docs/5.2/get-start/upgrade-from-market/upgrade-from-market-5.png" title="升级管理页面" width="100%" />
 
-- 在升级管理页面点击 **升级**。进入升级的详情页面，Rainbond 会自动比对版本差异并显示出来。
+- 在升级管理页面点击 **升级**。进入升级的详情页面，应用上云平台 会自动比对版本差异并显示出来。
 
 <img src="https://grstatic.oss-cn-shanghai.aliyuncs.com/docs/5.2/get-start/upgrade-from-market/upgrade-from-market-6.png" title="升级管理页面" width="100%" />
 

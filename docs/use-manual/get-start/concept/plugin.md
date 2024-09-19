@@ -1,6 +1,6 @@
 ---
 title: '插件'
-description: 介绍Rainbond插件的概念和设计思考
+description: 介绍应用上云平台插件的概念和设计思考
 ---
 
 ### 插件的定义
@@ -32,4 +32,4 @@ description: 介绍Rainbond插件的概念和设计思考
 
 ### 更多阅读
 
-[插件开发说明](use-manual/team-manage/plugin-manage/plugin-design-develop/)
+[插件开发说明](/use-manual/team-manage/plugin-manage/plugin-design-develop/)

@@ -5,7 +5,7 @@ description: 基于Prometheus的集群监控报警项说明
 
 ### 概述
 
-Rainbond 监控服务由组件 `rbd-monitor` 完成，在 monitor 组件中采用 Sidecar 设计模式思想整合 [Prometheus](https://prometheus.io/) 服务，并基于 ETCD动态发现 需要监控的 targets，自动配置与管理 Prometheus 服务。monitor 会定期到每个 targets 刮取指标数据，并将数据持久化在本地，提供灵活的PromQL查询与RESTful API查询。
+应用上云平台 监控服务由组件 `rbd-monitor` 完成，在 monitor 组件中采用 Sidecar 设计模式思想整合 [Prometheus](https://prometheus.io/) 服务，并基于 ETCD动态发现 需要监控的 targets，自动配置与管理 Prometheus 服务。monitor 会定期到每个 targets 刮取指标数据，并将数据持久化在本地，提供灵活的PromQL查询与RESTful API查询。
 
 #### 架构图：
 
@@ -45,7 +45,7 @@ rbd-monitor   ClusterIP   10.68.140.5   <none>        9999/TCP   7h11m
 |node_memory_MemFree|node|节点内存free|
 |node_uname_info|node|节点信息|
 
-#### Rainbond服务组件监控项
+#### 应用上云平台服务组件监控项
 
 | 监控项     | 所属组件        |说明                     |
 | :------- | :-----------|:----------------------- |
@@ -196,7 +196,7 @@ rbd-monitor   ClusterIP   10.68.140.5   <none>        9999/TCP   7h11m
 
 | 报警项     | 报警信息                   |
 | :------- | :----------------------- |
-| Rainbond 集群node节点不健康|RbdNodeUnhealth|
+| 应用上云平台 集群node节点不健康|RbdNodeUnhealth|
 | K8s集群node节点不健康|KubeNodeUnhealth|
 | 收集集群信息时间超过10s|ClusterCollectorTimeout|
 | 租户使用资源超出资源限额|InsufficientTenantResources|

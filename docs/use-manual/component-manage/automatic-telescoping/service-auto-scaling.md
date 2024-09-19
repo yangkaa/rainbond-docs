@@ -3,7 +3,7 @@ title: 组件自动伸缩
 description: 自动伸缩会根据观察的指标,自动缩放组件.
 ---
 
-组件的负载会不停的变化, 时高时低, 很难为其配置合适的资源; Rainbond 引入自动伸缩, 可以很好地解决这个问题.
+组件的负载会不停的变化, 时高时低, 很难为其配置合适的资源; 应用上云平台 引入自动伸缩, 可以很好地解决这个问题.
 组件自动伸缩会一直观察用户设置的指标, 一旦该指标超过或低于期望阈值, 就会自动地对组件进行伸缩.
 
 本文会根据以下三方面来介绍组件的自动伸缩功能:
@@ -16,7 +16,7 @@ description: 自动伸缩会根据观察的指标,自动缩放组件.
 
 组件的自动伸缩有两种, 分别是 `水平自动伸缩` 和 `垂直自动伸缩`. 水平伸缩, 增加或减少组件的副本数; 而自动水平伸缩则是, 根据组件的 CPU 使用率, 内存或其他自定义指标, 自动的执行组件的水平伸缩.
 垂直伸缩, 为组件分配更多或更少的 CPU 和内存; 而自动垂直伸缩则是, 根据组件的 CPU 使用率, 内存或其他自定义指标, 自动的执行组件的垂直伸缩.
-目前(5.1.9), Rainbond 只支持组件的水平自动伸缩, 所以本文不会涉及太多的 `垂直自动伸缩`.
+目前(5.1.9), 应用上云平台 只支持组件的水平自动伸缩, 所以本文不会涉及太多的 `垂直自动伸缩`.
 
 #### 组件水平自动伸缩
 
@@ -30,7 +30,7 @@ description: 自动伸缩会根据观察的指标,自动缩放组件.
 
 HPA 控制器一般从 `metrics.k8s.io`, `custom.metrics.k8s.io` 和 `external.metrics.k8s.io` 三个聚合 API 观察指标。
 
-`metrics.k8s.io` 这个 API 由 [metrics-server](https://github.com/kubernetes-sigs/metrics-server) 提供, 对应的是`资源指标(resource metrics)`, 即 `CPU 使用率`, `CPU 使用量` 和 `内存使用率`, `内存使用量`. 也是 Rainbond 目前支持的指标类型。
+`metrics.k8s.io` 这个 API 由 [metrics-server](https://github.com/kubernetes-sigs/metrics-server) 提供, 对应的是`资源指标(resource metrics)`, 即 `CPU 使用率`, `CPU 使用量` 和 `内存使用率`, `内存使用量`. 也是 应用上云平台 目前支持的指标类型。
 
 `custom.metrics.k8s.io` 对应的是 `自定义指标`, `external.metrics.k8s.io` 对应的是 `外部指标`. 比如: `每秒请求数(requests-per-secon)`, `每秒接收的包数(packets-per-second)`.
 由 [Kube Metrics Adapter](https://github.com/zalando-incubator/kube-metrics-adapter), [Prometheus Adapter](https://github.com/directxman12/k8s-prometheus-adapter)
@@ -39,7 +39,7 @@ HPA 控制器一般从 `metrics.k8s.io`, `custom.metrics.k8s.io` 和 `external.m
 
 自定义指标不支持使用率, 只能是`值`, 或者说 `使用量`, 是组件的每个实例的平均值.
 
-目前 5.1.9, Rainbond 只支持 `资源指标`, 即与 CPU 和内存相关的指标. 虚线框里自定义指标和外部指标, 会在未来的版本中实现.
+目前 5.1.9, 应用上云平台 只支持 `资源指标`, 即与 CPU 和内存相关的指标. 虚线框里自定义指标和外部指标, 会在未来的版本中实现.
 
 #### 水平自动伸缩的算法
 
@@ -70,7 +70,7 @@ desiredReplicas = ceil[currentReplicas * ( currentMetricValue / desiredMetricVal
 
 #### 指标
 
-目前, Rainbond 仅支持资源指标(resource metrics), 即 `CPU 使用率`, `CPU 使用量`, `内存使用率` 和 `内存使用量`.
+目前, 应用上云平台 仅支持资源指标(resource metrics), 即 `CPU 使用率`, `CPU 使用量`, `内存使用率` 和 `内存使用量`.
 CPU 使用量的单位是 m, 1m 等于千分之一核. 内存使用量的单位是 Mi.
 
 指标支持添加和删除, 遵循以下的规则:
@@ -164,4 +164,4 @@ CPU 使用率降低到了 0, 所以实例数伸缩到了 1.
 我们在一个无限循环不断给组件发送消息后, 水平自动伸缩检查到 CPU 使用率超过了目标值, 开始讲实例数伸缩到了 4, 再到 6.
 当我们停止发送消息后, 负载下去了, 水平自动伸缩检查到 CPU 使用率低于目标值, 直接将实例数伸缩到了 1。
 
-Rainbond 记录组件的实例变化过程，让运维人员可以随时查看组件的实例变化。
+应用上云平台 记录组件的实例变化过程，让运维人员可以随时查看组件的实例变化。

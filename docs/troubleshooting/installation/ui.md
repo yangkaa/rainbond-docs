@@ -6,13 +6,13 @@ keywords:
 - 主机安装，安装问题排查
 ---
 
-当用户在 Web 界面中从主机开始安装 Rainbond 时，所遭遇的问题可以依靠当前文档的内容进行排查与解决。
+当用户在 Web 界面中从主机开始安装 应用上云平台 时，所遭遇的问题可以依靠当前文档的内容进行排查与解决。
 
 ## 安装流程
 
 ![](https://static.goodrain.com/docs/5.12/troubleshooting/installation/ui-process.png)
 
-基于主机安装的流程中，通过 Rainbond 控制台的 [Adaptor](https://github.com/goodrain/cloud-adaptor) 服务安装 Kubernetes 集群和 Rainbond 集群。
+基于主机安装的流程中，通过 应用上云平台 控制台的 [Adaptor](https://github.com/goodrain/cloud-adaptor) 服务安装 Kubernetes 集群和 应用上云平台 集群。
 
 **安装 Kubernetes 集群流程**
 
@@ -20,11 +20,11 @@ keywords:
 
 * 该过程通过图形化界面的定义，安装了一套完整的 Kubernetes 集群。在安装过程中可能触发图形化界面的报错提示，也需要在安装完成后，手动安装 [Kubectl命令行工具](ops-guide/tools/#kubectl)，确认当前集群可用。
 
-**安装 Rainbond 集群流程**
+**安装 应用上云平台 集群流程**
 
-该过程基于上个步骤已经安装好的 Kubernetes 集群继续安装 Rainbond 各组件。安装的过程：
+该过程基于上个步骤已经安装好的 Kubernetes 集群继续安装 应用上云平台 各组件。安装的过程：
 
-* 首先会部署 Rainbond Operator，该组件负责管理 Rainbond 集群的各个组件。
+* 首先会部署 应用上云平台 Operator，该组件负责管理 应用上云平台 集群的各个组件。
 * 后面所有 POD 都会通过 Operator 依次创建。
 
 ## Kubernetes 安装常见问题
@@ -32,7 +32,7 @@ keywords:
 ### Cluster must have at least one etcd plane host
 这种情况一般是你配置的节点 IP 地址或 SSH 端口不正确或端口有防火墙策略，导致控制台无法连接指定的节点。重新配置正确的节点 IP 地址和 SSH 端口，或开启 SSH 端口的防火墙策略。
 
-另一种可能的情况，是安装 Rainbond 所使用的宿主机节点中， 目录 `/home/docker/.ssh` 的属主和属组不是 docker 用户，执行以下命令改正后重试：
+另一种可能的情况，是安装 应用上云平台 所使用的宿主机节点中， 目录 `/home/docker/.ssh` 的属主和属组不是 docker 用户，执行以下命令改正后重试：
 
 ```bash
 chown docker:docker /home/docker/.ssh
@@ -175,7 +175,7 @@ kubectl logs -f kube-flannel-75nfv -n kube-system -c kube-flannel
  
 推荐参考 [升级内核版本](https://t.goodrain.com/t/topic/1305) 安装 kernel-lt 分支的长期支持版内核。
 
-## Rainbond 集群初始化异常情况分析
+## 应用上云平台 集群初始化异常情况分析
 
 ### Web 页面中的提示
 
@@ -192,11 +192,11 @@ kubectl logs -f kube-flannel-75nfv -n kube-system -c kube-flannel
 
 ### 集群端问题排查
 
-在安装 Rainbond 的过程中，了解 `rbd-system` 命名空间下所有 pod 的状态也是很有必要的。
+在安装 应用上云平台 的过程中，了解 `rbd-system` 命名空间下所有 pod 的状态也是很有必要的。
 
-在确认 Kubernetes 集群状态健康之后，可以开始排查 Rainbond 集群各 Pod 的状态。
+在确认 Kubernetes 集群状态健康之后，可以开始排查 应用上云平台 集群各 Pod 的状态。
 
-- 查看 Rainbond 所有组件状态，Rainbond的所有组件都位于 `rbd-system` 名称空间下
+- 查看 应用上云平台 所有组件状态，应用上云平台的所有组件都位于 `rbd-system` 名称空间下
 
 ```bash
 $ kubectl get pods -n rbd-system
@@ -290,4 +290,4 @@ kubectl get pods | grep Evicted | awk '{print $1}' | xargs kubectl delete
 
 ##### FailedMount
 
-挂载卷失败，需要关注所有的宿主机节点是否安装了指定的文件系统客户端。例如在默认情况下，Rainbond 会自行安装 nfs 作为集群共享存储，可能会在 Events 中见到如下报错：`Unable to attach or mount volumes: unmount volmes=[grdata access region-api-ssl rainbond-operator-token-xxxx]: timed out waiting for the condition`。这通常是因为宿主机没有安装 `nfs-client` 或 `nfs-common` 等 nfs 客户端软件包。
+挂载卷失败，需要关注所有的宿主机节点是否安装了指定的文件系统客户端。例如在默认情况下，应用上云平台 会自行安装 nfs 作为集群共享存储，可能会在 Events 中见到如下报错：`Unable to attach or mount volumes: unmount volmes=[grdata access region-api-ssl rainbond-operator-token-xxxx]: timed out waiting for the condition`。这通常是因为宿主机没有安装 `nfs-client` 或 `nfs-common` 等 nfs 客户端软件包。

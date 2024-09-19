@@ -9,7 +9,7 @@ description: "rbd-hub组件参数说明"
 
 ### 运行方式
  
-运行于Kubernetes集群内部，POD运行,由Kubernetes和Rainbond-Operator共同维护和管理
+运行于Kubernetes集群内部，POD运行,由Kubernetes和应用上云平台-Operator共同维护和管理
 
 
 ### 常用参数说明

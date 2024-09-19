@@ -1,24 +1,24 @@
 ---
 title: 平台组件架构
-description: 本文主要介绍完整部署Rainbond所需要的所有服务组件，帮助用户了解Rainbond技术栈与组件架构。
+description: 本文主要介绍完整部署应用上云平台所需要的所有服务组件，帮助用户了解应用上云平台技术栈与组件架构。
 keywords: 
-- Rainbond 平台组件架构
+- 应用上云平台 平台组件架构
 ---
 
-本文主要介绍完整部署Rainbond所需要的所有服务组件，帮助用户了解 Rainbond 技术栈与组件架构。
+本文主要介绍完整部署应用上云平台所需要的所有服务组件，帮助用户了解 应用上云平台 技术栈与组件架构。
 
-目前版本，系统组件生命周期由 `Kubernetes` 和 `Rainbond-Operator` 共同维护和管理。
+目前版本，系统组件生命周期由 `Kubernetes` 和 `应用上云平台-Operator` 共同维护和管理。
 
-Rainbond 由 Console(控制台) + Region(集群端) + Kubernetes(RKE) 组成。
+应用上云平台 由 Console(控制台) + Region(集群端) + Kubernetes(RKE) 组成。
 
 ## Docker
 
-使用 Rainbond 脚本安装的 Docker 默认版本为 `20.10.9`
+使用 应用上云平台 脚本安装的 Docker 默认版本为 `20.10.9`
 
 ## Kubernetes (RKE)
-使用 Rainbond 基于主机安装的 Kubernetes 版本为 `v1.23.10` ，更多详情请参阅 [RKE](https://docs.rancher.cn/rke/) 文档。
+使用 应用上云平台 基于主机安装的 Kubernetes 版本为 `v1.23.10` ，更多详情请参阅 [RKE](https://docs.rancher.cn/rke/) 文档。
 
-## Rainbond
+## 应用上云平台
 ### Console 控制台组件概述
 
 控制台部署目前有 2 种部署方式：
@@ -28,13 +28,13 @@ Rainbond 由 Console(控制台) + Region(集群端) + Kubernetes(RKE) 组成。
 
 ### Region 集群端组件概述
 
-介绍 Rainbond 各个组件的版本信息以及组件的作用。
+介绍 应用上云平台 各个组件的版本信息以及组件的作用。
 
 以下是部署在 Kubernetes 集群中的，以 POD 运行，通过 `kubectl get pod -n rbd-system` 命令可以查看。
 
 |组件|版本|说明|控制器类型|
 |---|-----|---------------|---|
-|[rainbond-operator](./rainbond-operator)|5.x|维护 Rainbond 组件的配置与运行状态|Deployment|
+|[rainbond-operator](./rainbond-operator)|5.x|维护 应用上云平台 组件的配置与运行状态|Deployment|
 |rbd-api|5.x|API服务，提供 Region 端接口|Deployment|
 |rbd-chaos|5.x|应用构建服务，提供源码，Docker镜像等方式创建应用|Daemonset|
 |rbd-db|8.0|数据库服务，支持MySQL `5.6` `5.7` `8.0`|Statefulset|

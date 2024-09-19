@@ -2,7 +2,7 @@
 title: 邮件告警
 draft: false
 weight: 1673
-description: Rainbond邮件报警配置说明
+description: 应用上云平台邮件报警配置说明
 ---
 
 
@@ -48,7 +48,7 @@ receivers:
    # 接收警报的email配置
   - to: 'XXXXX@163.com'
    # 接收邮件的标题
-    headers: { Subject: "[WARN] Rainbond报警邮件" }
+    headers: { Subject: "[WARN] 应用上云平台报警邮件" }
 ```
 
 到此完成邮件报警的部署。

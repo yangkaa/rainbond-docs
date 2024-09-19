@@ -6,7 +6,7 @@ description: 将组件、应用、解决方案发布成为可复用的应用模�
 
 ### 目的
 
-通过文档学习如何将用户自己部署的业务系统，发布到 Rainbond 提供的 **应用市场** 中，成为可复用的 **应用模版**。
+通过文档学习如何将用户自己部署的业务系统，发布到 应用上云平台 提供的 **应用市场** 中，成为可复用的 **应用模版**。
 
 这么做的意义在于，将用户自己的业务系统作为解决方案发布之后：
 
@@ -20,11 +20,11 @@ description: 将组件、应用、解决方案发布成为可复用的应用模�
 
 ### 前提条件
 
-- 完成 [从源码部署一个服务组件](use-manual/get-start/create-app-from-source/) 获得 **Java 演示示例**。
+- 完成 [从源码部署一个服务组件](/use-manual/get-start/create-app-from-source/) 获得 **Java 演示示例**。
 
-- 完成 [从应用市场部署一个应用](use-manual/get-start/create-app-from-market/) 获得 **Mysql5.7（单机版）**。
+- 完成 [从应用市场部署一个应用](/use-manual/get-start/create-app-from-market/) 获得 **Mysql5.7（单机版）**。
 
-- 完成 [建立依赖关系](use-manual/get-start/create-dependency/) 获得完整的解决方案示例。
+- 完成 [建立依赖关系](/use-manual/get-start/create-dependency/) 获得完整的解决方案示例。
 
 接下来，我们来将 **Java 演示示例** + **Mysql5.7（单机版）** 组合而成的应用 （业务层面可视为一套完整的解决方案）发布为一个应用模版。
 
@@ -48,7 +48,7 @@ description: 将组件、应用、解决方案发布成为可复用的应用模�
 
 ### 应用同步
 
-在这个页面里，Rainbond 会自动进行应用同步，包括镜像的打包与推送。用户只需要静待同步完成，看到下面的情况，即同步完成。
+在这个页面里，应用上云平台 会自动进行应用同步，包括镜像的打包与推送。用户只需要静待同步完成，看到下面的情况，即同步完成。
 
 <img src="https://grstatic.oss-cn-shanghai.aliyuncs.com/docs/5.2/get-start/release-to-market/release-to-market-2.png" title="同步完成" width="100%" />
 
@@ -90,9 +90,9 @@ description: 将组件、应用、解决方案发布成为可复用的应用模�
 
 ### 安装应用模版
 
-这个步骤，和 [从应用市场部署一个应用](use-manual/get-start/create-app-from-market/) 是一致的，目的就是验证所发布的示例应用模版，是否可以安装成功。
+这个步骤，和 [从应用市场部署一个应用](/use-manual/get-start/create-app-from-market/) 是一致的，目的就是验证所发布的示例应用模版，是否可以安装成功。
 
-具体操作，可以复习 [从应用市场部署一个应用](use-manual/get-start/create-app-from-market/) 中的操作，这里不再赘述。
+具体操作，可以复习 [从应用市场部署一个应用](/use-manual/get-start/create-app-from-market/) 中的操作，这里不再赘述。
 
 最终的效果，是基于应用市场复制出一个新的应用。
 

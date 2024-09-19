@@ -1,9 +1,9 @@
 ---
 title: 性能分析
-description: Rainbond组件性能分析功能解读
+description: 应用上云平台组件性能分析功能解读
 ---
 
-组件实时性能分析功能依赖于组件开通性能分析类插件完成。 Rainbond 目前默认提供了支持 HTTP 协议和 Mysql 协议的性能分析插件供用户使用。
+组件实时性能分析功能依赖于组件开通性能分析类插件完成。 应用上云平台 目前默认提供了支持 HTTP 协议和 Mysql 协议的性能分析插件供用户使用。
 
 ## 组件性能分析
 
@@ -25,7 +25,7 @@ description: Rainbond组件性能分析功能解读
 
 ## 监控效果
 
-性能分析数据持久化的存储于 Rainbond monitor 组件中，供给客户端查询。在组件监控页面中，我们除了展示监控历史数据以为，还实时的展示 http 和 mysql 的请求情况，比如 mysql 请求的 sql 语句执行情况。这对于用户进行精细化挑优提供了一个直接的指引。
+性能分析数据持久化的存储于 应用上云平台 monitor 组件中，供给客户端查询。在组件监控页面中，我们除了展示监控历史数据以为，还实时的展示 http 和 mysql 的请求情况，比如 mysql 请求的 sql 语句执行情况。这对于用户进行精细化挑优提供了一个直接的指引。
 
 ![](https://static.goodrain.com/docs/5.6/use-manual/component-manage/monitor/performance-analysis.png)
 

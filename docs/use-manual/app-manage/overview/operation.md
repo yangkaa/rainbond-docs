@@ -1,6 +1,6 @@
 ---
 title: 应用生命周期
-description: 讲述Rainbond应用的基础操作
+description: 讲述应用上云平台应用的基础操作
 ---
 
 ## 支持的基础操作

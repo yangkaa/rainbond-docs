@@ -5,7 +5,7 @@ description: 讲解.slugignore文件的用法和作用
 
 ### .slugignore 文件作用介绍
 
-`.slugignore` 与大家知道的[.gitignore](https://git-scm.com/docs/gitignore)文件一样，具有在打包阶段忽略某些文件的作用。我们在使用 Rainbond 进行源码构建打包时或许会有这样一个需求，我不想将源代码打包到最终的软件包中，但是 Rainbond 需要根据你的定义确定哪些文件是你不想要的。因此就有了`.slugignore` 文件。
+`.slugignore` 与大家知道的[.gitignore](https://git-scm.com/docs/gitignore)文件一样，具有在打包阶段忽略某些文件的作用。我们在使用 应用上云平台 进行源码构建打包时或许会有这样一个需求，我不想将源代码打包到最终的软件包中，但是 应用上云平台 需要根据你的定义确定哪些文件是你不想要的。因此就有了`.slugignore` 文件。
 
 ### .slugignore 文件定义方式
 

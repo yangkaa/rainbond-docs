@@ -1,9 +1,9 @@
 ---
 title: 高级环境变量配置
-description: Rainbond关于环境变量的一些高级用法，适合于开发者参考，使应用可以有效的与平台产生互动。
+description: 应用上云平台关于环境变量的一些高级用法，适合于开发者参考，使应用可以有效的与平台产生互动。
 ---
 
-组件的运行环境除了用户自己设置的环境变量以外，平台还会默认注入一些有用的环境变量。另外，一些实验性质的新功能也可能基于设置特殊的环境变量的开启或设置。因此，了解 Rainbond 默认的环境变量机制可以使开发者在诸多场景中更高效的开发，也能生产出更适合 Rainbond 运行的应用。
+组件的运行环境除了用户自己设置的环境变量以外，平台还会默认注入一些有用的环境变量。另外，一些实验性质的新功能也可能基于设置特殊的环境变量的开启或设置。因此，了解 应用上云平台 默认的环境变量机制可以使开发者在诸多场景中更高效的开发，也能生产出更适合 应用上云平台 运行的应用。
 
 ### 默认注入的环境变量
 
@@ -63,7 +63,7 @@ description: Rainbond关于环境变量的一些高级用法，适合于开发�
 | BUILD_MAVEN_CUSTOM_OPTS  | -DskipTests=true -Dmaven.wagon.http.ssl.insecure=true -Dmaven.wagon.http.ssl.allowall=true | 用于 maven 构建，默认值如前 |
 | BUILD_MAVEN_CUSTOM_GOALS | clean install                                                                              | 用于 maven 构建，默认值如前 |
 
-更多组件构建环境设置，请参考 [组件构建源配置](use-manual/component-manage/build-source/)
+更多组件构建环境设置，请参考 [组件构建源配置](/use-manual/component-manage/build-source/)
 
 ### 应用运行时功能控制变量
 

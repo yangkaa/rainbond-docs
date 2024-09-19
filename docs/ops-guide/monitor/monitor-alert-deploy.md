@@ -1,21 +1,21 @@
 ---
 title: 监控告警服务部署
-description: Rainbond监控报警服务部署说明
+description: 应用上云平台监控报警服务部署说明
 ---
 
 
 ### 概述
 
-Rainbond 监控报警系统基于 Alertmanager 服务， Alertmanager 主要用于接收 Prometheus 发送的告警信息，支持丰富的告警通知渠道，而且很容易做到告警信息进行去重，降噪，分组等，是一款前卫的告警通知系统。
+应用上云平台 监控报警系统基于 Alertmanager 服务， Alertmanager 主要用于接收 Prometheus 发送的告警信息，支持丰富的告警通知渠道，而且很容易做到告警信息进行去重，降噪，分组等，是一款前卫的告警通知系统。
 
 
-本文档适合意图对 Rainbond 节点或 Rainbond 组件进行监控的用户阅读，讲述如何在 Rainbond部署监控报警系统。
+本文档适合意图对 应用上云平台 节点或 应用上云平台 组件进行监控的用户阅读，讲述如何在 应用上云平台部署监控报警系统。
 
 集群监控报警项说明参见 [集群监控报警项说明](./monitor-alert-items)
 
 ### 操作步骤
 
-通过应用市场一键安装的方式，可以将 Alertmanager，WeChat，DingTalk，一并部署到你的 Rainbond 环境中。
+通过应用市场一键安装的方式，可以将 Alertmanager，WeChat，DingTalk，一并部署到你的 应用上云平台 环境中。
 
  **安装部署**
 
@@ -46,7 +46,7 @@ spec:
   - --alertmanager-address=39.99.54.241:10000
   env:
   - name: REGION_NAME
-    value: Rainbond
+    value: 应用上云平台
 ```
 
 参数解释：

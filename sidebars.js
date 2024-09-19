@@ -16,441 +16,6 @@ const sidebars = {
   docs: [
     {
       type: 'category',
-      label: '快速开始',
-      collapsible: false,
-      items: [
-        'quick-start/introduction',
-        'quick-start/quick-install',
-        'quick-start/getting-started',
-        'quick-start/differences',
-        {
-          type: 'category',
-          label: '架构',
-          items: [
-            'quick-start/architecture/design-concept',
-            'quick-start/architecture/flow',
-            'quick-start/architecture/architecture'
-          ]
-        },
-        // 'quick-start/edition',
-        // 'quick-start/contributing',
-        // 'quick-start/roadmap'
-      ]
-    },
-    {
-      type: 'category',
-      label: '安装与升级 Rainbond',
-      link: {
-        type: 'doc',
-        id: 'installation/index'
-      },
-      items: [
-        // 'installation/install-with-dind',
-        'installation/install-with-ui/index',
-        {
-          type: 'category',
-          label: '基于 Kubernetes 安装',
-          link: {
-            type: 'doc',
-            id: 'installation/install-with-helm/index'
-          },
-          items: [
-            'installation/install-with-helm/install-from-kubernetes',
-            'installation/install-with-helm/vaules-config',
-            {
-              type: 'category',
-              label: '在托管 Kubernetes 上安装',
-              link: {
-                type: 'doc',
-                id: 'installation/install-with-helm/cloud/index'
-              },
-              items: [
-                'installation/install-with-helm/cloud/ack-install-with-helm',
-                'installation/install-with-helm/cloud/cce-install-with-helm',
-              ]
-            },
-            {
-              type: 'category',
-              label: '其他安装方式',
-              link: {
-                type: 'doc',
-                id: 'installation/install-with-helm/other/index'
-              },
-              items: [
-                'installation/install-with-helm/other/k3s-install-with-helm',
-                'installation/install-with-helm/other/install-from-minikube',
-                'installation/install-with-helm/other/install-from-rancher',
-              ]
-            },
-            // {
-            //   type: 'link',
-            //   label: 'Helm 命令生成工具',
-            //   href: '/helm'
-            // },
-          ]
-        },
-        {
-          type: 'category',
-          label: '高可用集群安装',
-          link: {
-            type: 'doc',
-            id: 'installation/ha-deployment/index'
-          },
-          items: [
-            {
-              type: 'category',
-              label: '安装前准备与要求',
-              link: {
-                type: 'doc',
-                id: 'installation/ha-deployment/overview/index'
-              },
-              items: [
-                'installation/ha-deployment/overview/mysql-ha',
-                'installation/ha-deployment/overview/deploy-keepalived',
-              ]
-            },
-            {
-              type: 'category',
-              label: 'Kubernetes 集群安装',
-              link: {
-                type: 'doc',
-                id: 'installation/ha-deployment/deploy-k8s/index'
-              },
-              items: [
-                'installation/ha-deployment/deploy-k8s/rke-config',
-              ]
-            },
-            {
-              type: 'category',
-              label: '分布式文件存储安装',
-              link: {
-                type: 'doc',
-                id: 'installation/ha-deployment/storage/index'
-              },
-              items: [
-                'installation/ha-deployment/storage/ceph-rbd',
-              ]
-            },
-            {
-              type: 'category',
-              label: 'Rainbond 集群安装',
-              link: {
-                type: 'doc',
-                id: 'installation/ha-deployment/deploy-rainbond/index'
-              },
-              items: [
-                'installation/ha-deployment/deploy-rainbond/init-rainbond-config',
-              ]
-            },
-            'installation/ha-deployment/console-recover',
-          ]
-        },
-        'installation/offline/index',
-        'upgrade/latest-version',
-        'installation/uninstall',
-      ]
-    },
-    {
-      type: 'category',
-      label: 'DevOps 指南',
-      link: {
-        type: 'doc',
-        id: 'devops/index'
-      },
-      items: [
-        'devops/overview/index',
-        'devops/code-repository/index',
-        {
-          type: 'category',
-          label: '应用部署',
-          link: {
-            type: 'doc',
-            id: 'devops/app-deploy/index'
-          },
-          items: [
-            'devops/app-deploy/react-vue',
-            'devops/app-deploy/springboot',
-            {
-              type: 'category',
-              label: '工具集成',
-              link: {
-                type: 'doc',
-                id: 'devops/app-deploy/ci-tools/index',
-              },
-              items: [
-                'devops/app-deploy/ci-tools/gitlab-ci',
-                'devops/app-deploy/ci-tools/sonarqube',
-              ]
-            },
-          ]
-        },
-        'devops/env-version/index',
-        {
-          type: 'category',
-          label: '持续部署',
-          link: {
-            type: 'doc',
-            id: 'devops/continuous-deploy/index',
-          },
-          items: [
-            'devops/continuous-deploy/gitops',
-            'devops/continuous-deploy/auto-build',
-          ]
-        },
-        {
-          type: 'category',
-          label: '应用调试',
-          link: {
-            type: 'doc',
-            id: 'devops/app-debug/index',
-          },
-          items: [
-            'devops/app-debug/nocalhost',
-          ]
-        },
-        {
-          type: 'category',
-          label: 'Pipeline 概述',
-          link: {
-            type: 'doc',
-            id: 'devops/pipeline/index',
-          },
-          items: [
-            'devops/pipeline/install',
-            'devops/pipeline/app-service',
-            'devops/pipeline/repository',
-            'devops/pipeline/images',
-            'devops/pipeline/deploy-history',
-            'devops/pipeline/pipelines',
-          ]
-        },
-      ]
-    },
-    {
-      type: 'category',
-      label: '原生 Kubernetes 指南',
-      link: {
-        type: 'doc',
-        id: 'kubernetes-native-guide/index'
-      },
-      items: [
-        'kubernetes-native-guide/overview/index',
-        {
-          type: 'category',
-          label: '使用 YAML 部署组件',
-          link: {
-            type: 'doc',
-            id: 'kubernetes-native-guide/yaml/index'
-          },
-          items: [
-            'kubernetes-native-guide/yaml/create',
-            'kubernetes-native-guide/yaml/example',
-          ]
-        },
-        {
-          type: 'category',
-          label: '使用 Helm 部署组件',
-          link: {
-            type: 'doc',
-            id: 'kubernetes-native-guide/helm/index'
-          },
-          items: [
-            'kubernetes-native-guide/helm/docking_helm_store',
-            'kubernetes-native-guide/helm/creation-process',
-            'kubernetes-native-guide/helm/manage-helm-app',
-            'kubernetes-native-guide/helm/helm-cmd-install',
-            'kubernetes-native-guide/helm/example',
-            'kubernetes-native-guide/helm/export-chart',
-          ]
-        },
-        'kubernetes-native-guide/deploy-job',
-        {
-          type: 'category',
-          label: '已有资源导入和管理',
-          link: {
-            type: 'doc',
-            id: 'kubernetes-native-guide/import-manage/index'
-          },
-          items: [
-            'kubernetes-native-guide/import-manage/non-workload',
-            'kubernetes-native-guide/import-manage/import-resource',
-            'kubernetes-native-guide/import-manage/special-attribute',
-          ]
-        },
-        'kubernetes-native-guide/gateway-api',
-      ]
-    },
-    {
-      type: 'category',
-      label: '微服务架构指南',
-      link: {
-        type: 'doc',
-        id: 'micro-service/index'
-      },
-      items: [
-        'micro-service/overview/index',
-        {
-          type: 'category',
-          label: 'Service Mesh 使用',
-          link: {
-            type: 'doc',
-            id: 'micro-service/service-mesh/index'
-          },
-          items: [
-            'micro-service/service-mesh/regist_and_discover',
-            'micro-service/service-mesh/connection_env',
-            'micro-service/service-mesh/traffic-management',
-            {
-              type: 'category',
-              label: '熔断与限流',
-              link: {
-                type: 'doc',
-                id: 'micro-service/service-mesh/fused-limit/index'
-              },
-              items: [
-                'micro-service/service-mesh/fused-limit/fused',
-                'micro-service/service-mesh/fused-limit/limit',
-              ]
-            },
-            {
-              type: 'category',
-              label: 'Service Mesh 治理模式',
-              link: {
-                type: 'doc',
-                id: 'micro-service/service-mesh/model/index'
-              },
-              items: [
-                'micro-service/service-mesh/model/deploy-istio',
-              ]
-            },
-          ]
-        },
-        {
-          type: 'category',
-          label: 'Spring Cloud 微服务部署',
-          link: {
-            type: 'doc',
-            id: 'micro-service/example/index'
-          },
-          items: [
-            'micro-service/example/pig',
-            'micro-service/example/blade',
-          ]
-        },
-        {
-          type: 'category',
-          label: '链路追踪',
-          link: {
-            type: 'doc',
-            id: 'micro-service/tracking/index'
-          },
-          items: [
-            'micro-service/tracking/pinpoint',
-            'micro-service/tracking/skywalking',
-            'micro-service/tracking/jaeger',
-          ]
-        },
-        {
-          type: 'category',
-          label: '性能分析',
-          link: {
-            type: 'doc',
-            id: 'micro-service/analysis/index'
-          },
-          items: [
-            'micro-service/analysis/pyroscope',
-            'micro-service/analysis/arthas',
-          ]
-        },
-      ]
-    },
-    {
-      type: 'category',
-      label: '应用交付指南',
-      link: {
-        type: 'doc',
-        id: 'delivery/index'
-      },
-      items: [
-        {
-          type: 'category',
-          label: '持续交付',
-          link: {
-            type: 'doc',
-            id: 'delivery/continuous/index',
-          },
-          items: [
-            'delivery/continuous/source-code',
-            'delivery/continuous/ram',
-            'delivery/continuous/multi-env',
-          ]
-        },
-        {
-          type: 'category',
-          label: '离线交付',
-          link: {
-            type: 'doc',
-            id: 'delivery/offline/index',
-          },
-          items: [
-            'delivery/offline/micro-service',
-            'delivery/offline/development-iteration',
-          ]
-        },
-        'delivery/app-model-parameters',
-      ]
-    },
-    {
-      type: 'category',
-      label: '信创指南',
-      link: {
-        type: 'doc',
-        id: 'localization-guide/index'
-      },
-      items: [
-        'localization-guide/overview/index',
-        'localization-guide/multi-arch-installation',
-        'localization-guide/multi-arch-app-deploy',
-        'localization-guide/multi-arch-app-orchestration',
-        'localization-guide/multi-arch-model',
-      ]
-    },
-    {
-      type: 'category',
-      label: '集群管理指南',
-      link: {
-        type: 'doc',
-        id: 'cluster-manage/index'
-      },
-      items: [
-        {
-          type: 'category',
-          label: '集群状态监控',
-          link: {
-            type: 'doc',
-            id: 'cluster-manage/status-monitor/index',
-          },
-          items: [
-            'cluster-manage/status-monitor/dashboard',
-          ]
-        },
-        'cluster-manage/cluster-info',
-        'cluster-manage/resource-limit',
-        {
-          type: 'category',
-          label: '节点管理',
-          link: {
-            type: 'doc',
-            id: 'cluster-manage/nodes/index'
-          },
-          items: [
-            'cluster-manage/nodes/add-node',
-          ]
-        },
-      ]
-    },
-    {
-      type: 'category',
       label: '使用手册',
       link: {
         type: 'doc',
@@ -574,6 +139,7 @@ const sidebars = {
                 'use-manual/component-create/package-support/jar-war',
               ]
             },
+            'kubernetes-native-guide/helm/export-chart',
           ]
         },
         {
@@ -745,19 +311,19 @@ const sidebars = {
             },
           ]
         },
-        {
-          type: 'category',
-          label: '应用商店',
-          link: {
-            type: 'doc',
-            id: 'use-manual/app-store-manage/index'
-          },
-          items: [
-            'use-manual/app-store-manage/install-app',
-            'use-manual/app-store-manage/share-app',
-            'use-manual/app-store-manage/export-non-container-package',
-          ]
-        },
+        // {
+        //   type: 'category',
+        //   label: '应用商店',
+        //   link: {
+        //     type: 'doc',
+        //     id: 'use-manual/app-store-manage/index'
+        //   },
+        //   items: [
+        //     'use-manual/app-store-manage/install-app',
+        //     'use-manual/app-store-manage/share-app',
+        //     'use-manual/app-store-manage/export-non-container-package',
+        //   ]
+        // },
       ]
     },
     {
@@ -780,7 +346,6 @@ const sidebars = {
             'ops-guide/component/rbd-hub',
           ]
         },
-        'ops-guide/migrate-app',
         {
           type: 'category',
           label: '高级运维',
@@ -794,11 +359,8 @@ const sidebars = {
             'ops-guide/management/container-runtime-switch',
             'ops-guide/management/change-gateway',
             'ops-guide/management/buildkit-args',
-            'ops-guide/management/docker-log',
             'ops-guide/management/custom-shared-storage',
-            'ops-guide/management/change-ports',
             'ops-guide/management/switch-registry',
-            'ops-guide/management/auto-cert',
             'ops-guide/management/reset-admin-password',
           ]
         },
@@ -816,31 +378,6 @@ const sidebars = {
         },
         {
           type: 'category',
-          label: '集群监控',
-          link: {
-            type: 'doc',
-            id: 'ops-guide/monitor/index'
-          },
-          items: [
-            'ops-guide/monitor/monitor-alert-items',
-            'ops-guide/monitor/monitor-alert-deploy',
-            {
-              type: 'category',
-              label: '告警配置项',
-              link: {
-                type: 'doc',
-                id: 'ops-guide/monitor/alert/index'
-              },
-              items: [
-                'ops-guide/monitor/alert/alert-wechat',
-                'ops-guide/monitor/alert/alert-dingtalk',
-                'ops-guide/monitor/alert/alert-mail'
-              ]
-            }
-          ]
-        },
-        {
-          type: 'category',
           label: 'CLI 命令行',
           link: {
             type: 'doc',
@@ -848,7 +385,6 @@ const sidebars = {
           },
           items: [
             'ops-guide/tools/grctl',
-            'ops-guide/tools/shell',
           ]
         },
         {
@@ -882,8 +418,6 @@ const sidebars = {
             id: 'troubleshooting/installation/index'
           },
           items: [
-            'troubleshooting/installation/dind',
-            'troubleshooting/installation/ui',
             'troubleshooting/installation/helm',
           ]
         },
@@ -906,71 +440,71 @@ const sidebars = {
         },
       ],
     },
-    {
-      type: 'category',
-      label: '企业版使用手册',
-      link: {
-        type: 'doc',
-        id: 'enterprise/index'
-      },
-      items: [
-        {
-          type: 'category',
-          label: '可观测性中心',
-          link: {
-            type: 'doc',
-            id: 'enterprise/observability/index',
-          },
-          items: [
-            'enterprise/observability/dashboard',
-            'enterprise/observability/large-screen',
-            'enterprise/observability/global-logs',
-            'enterprise/observability/alarm',
-          ]
-        },
-        {
-          type: 'category',
-          label: '微服务治理',
-          link: {
-            type: 'doc',
-            id: 'enterprise/microservices/index',
-          },
-          items: [
-            'enterprise/microservices/springcloud',
-            'enterprise/microservices/istio',
-          ]
-        },
-        'enterprise/xinchuang',
-        'enterprise/gray-release',
-        'enterprise/scanner',
-        {
-          type: 'category',
-          label: '安全能力',
-          link: {
-            type: 'doc',
-            id: 'enterprise/security/index',
-          },
-          items: [
-            'enterprise/security/waf',
-            'enterprise/security/audit',
-          ]
-        },
-        'enterprise/style',
-        'enterprise/GPU',
-        {
-          type: 'category',
-          label: '其他功能',
-          link: {
-            type: 'doc',
-            id: 'enterprise/other/index',
-          },
-          items: [
-            'enterprise/other/team-resource',
-            'enterprise/other/file-manage',
-          ]
-        },
-      ]
-    },
+    // {
+    //   type: 'category',
+    //   label: '企业版使用手册',
+    //   link: {
+    //     type: 'doc',
+    //     id: 'enterprise/index'
+    //   },
+    //   items: [
+    //     {
+    //       type: 'category',
+    //       label: '可观测性中心',
+    //       link: {
+    //         type: 'doc',
+    //         id: 'enterprise/observability/index',
+    //       },
+    //       items: [
+    //         'enterprise/observability/dashboard',
+    //         'enterprise/observability/large-screen',
+    //         'enterprise/observability/global-logs',
+    //         'enterprise/observability/alarm',
+    //       ]
+    //     },
+    //     {
+    //       type: 'category',
+    //       label: '微服务治理',
+    //       link: {
+    //         type: 'doc',
+    //         id: 'enterprise/microservices/index',
+    //       },
+    //       items: [
+    //         'enterprise/microservices/springcloud',
+    //         'enterprise/microservices/istio',
+    //       ]
+    //     },
+    //     'enterprise/xinchuang',
+    //     'enterprise/gray-release',
+    //     'enterprise/scanner',
+    //     {
+    //       type: 'category',
+    //       label: '安全能力',
+    //       link: {
+    //         type: 'doc',
+    //         id: 'enterprise/security/index',
+    //       },
+    //       items: [
+    //         'enterprise/security/waf',
+    //         'enterprise/security/audit',
+    //       ]
+    //     },
+    //     'enterprise/style',
+    //     'enterprise/GPU',
+    //     {
+    //       type: 'category',
+    //       label: '其他功能',
+    //       link: {
+    //         type: 'doc',
+    //         id: 'enterprise/other/index',
+    //       },
+    //       items: [
+    //         'enterprise/other/team-resource',
+    //         'enterprise/other/file-manage',
+    //       ]
+    //     },
+    //   ]
+    // },
   ],
   api: [
     'api/Intro',

@@ -5,17 +5,17 @@ description: 本文介绍Java Maven源码部署组件的要点，适用于开发
 
 ### 原理文档阅读
 
-[Rainbond 构建 Java Maven 项目原理解读](./java-maven-de)
+[应用上云平台 构建 Java Maven 项目原理解读](./java-maven-de)
 
 ### Maven 项目识别策略
 
-当源代码根目录下存在 pom.xml 文件，且不存在 Dockerfile 文件时，Rainbond 会将源代码识别为 Java Maven 项目。
+当源代码根目录下存在 pom.xml 文件，且不存在 Dockerfile 文件时，应用上云平台 会将源代码识别为 Java Maven 项目。
 
 Maven 多模块项目构建，请直接参考 [Java Maven 多模块源码构建](./java-multi-module-build)。
 
 ### 验证准备
 
-将项目部署到 Rainbond 之前，请按照以下步骤进行本地验证，本地构建成功后，即可开始尝试将项目部署在 Rainbond 上。
+将项目部署到 应用上云平台 之前，请按照以下步骤进行本地验证，本地构建成功后，即可开始尝试将项目部署在 应用上云平台 上。
 
 - 源代码托管于 Git 或 SVN 服务器。
 
@@ -32,7 +32,7 @@ java -version
 mv ${HOME}/.m2/repository ${HOME}/.m2/repository.bak
 ```
 
-- 执行以下构建命令，该命令也是 Rainbond Java Maven 项目构建的默认命令：
+- 执行以下构建命令，该命令也是 应用上云平台 Java Maven 项目构建的默认命令：
 
 ```bash
 mvn -DskipTests clean dependency:list install
@@ -45,11 +45,11 @@ mvn -DskipTests clean dependency:list install
 
 ### 编译运行环境配置
 
-环境准备阶段，需要将 Rainbond 构建运行环境，和常用的本地构建运行环境尽量统一。比如 JDK 版本、Maven 版本等。
+环境准备阶段，需要将 应用上云平台 构建运行环境，和常用的本地构建运行环境尽量统一。比如 JDK 版本、Maven 版本等。
 
 #### 图形化设置
 
-Rainbond 支持图形化定义编译运行环境，配置位于服务组件的构建源页面。**对这些配置的修改，需要通过 [构建](use-manual/component-manage/overview/basic-operation) 来生效！**
+应用上云平台 支持图形化定义编译运行环境，配置位于服务组件的构建源页面。**对这些配置的修改，需要通过 [构建](/use-manual/component-manage/overview/basic-operation) 来生效！**
 
 <img src="https://grstatic.oss-cn-shanghai.aliyuncs.com/docs/5.2/component-create/language-support/java/java-maven-1.png" title="编译运行环境定义" />
 
@@ -57,7 +57,7 @@ Rainbond 支持图形化定义编译运行环境，配置位于服务组件的�
 
 - 选择编译运行所使用的 JDK（默认提供 OpenJDK） 以及 MAVEN 版本，**务必使用验证准备时验证过的版本**。
 
-- 选择自定义 JDK 下载地址，需要提供 Rainbond 服务器可以下载到的路径，来下载 tar.gz 格式的 JDK（可以是 OracleJDK） 安装包。
+- 选择自定义 JDK 下载地址，需要提供 应用上云平台 服务器可以下载到的路径，来下载 tar.gz 格式的 JDK（可以是 OracleJDK） 安装包。
 
 - 当构建产物为 `war` 文件时，还提供了 Tomcat、Jetty 的版本选择。
 
@@ -65,17 +65,17 @@ Rainbond 支持图形化定义编译运行环境，配置位于服务组件的�
 
 - MAVEN MIRROR OF 配置，与 MAVEN MIRROR URL 配置一起使用，可以定义构建过程中从镜像私服中拉取依赖的行为。默认配置为 `central`，如设置为 `*`，则所有的依赖包都会从 MAVEN MIRROR URL 配置中定义的镜像仓库地址拉取。
 
-- MAVEN MIRROR URL 配置，定义了构建过程中使用的仓库私服地址，**Rainbond 不支持 jar 包本地安装部署，所有需要的第三方 jar 包，请上传到仓库私服中去**。默认的 `maven.goodrain.me` 为 `rbd-repo` 组件的内网解析域名，它代理了阿里云 maven 仓库。
+- MAVEN MIRROR URL 配置，定义了构建过程中使用的仓库私服地址，**应用上云平台 不支持 jar 包本地安装部署，所有需要的第三方 jar 包，请上传到仓库私服中去**。默认的 `maven.goodrain.me` 为 `rbd-repo` 组件的内网解析域名，它代理了阿里云 maven 仓库。
 
 - MAVEN 构建参数、构建命令两个选项，组成编译所执行的命令，默认构建命令为 `mvn -DskipTests clean dependency:list install` 。
 
 - MAVEN 构建 java 参数配置，主要用来指定构建过程中分配的堆栈内存，**该配置只影响 maven 构建过程，构建完成的组件运行时指定的堆栈内存由 ${JAVA_OPTS} 变量指定**。
 
-- 启动命令，规定了构建过程完成后，Rainbond 如何启动当前服务组件，详细内容见后文 [启动命令配置](./java-maven#启动命令配置) 章节。
+- 启动命令，规定了构建过程完成后，应用上云平台 如何启动当前服务组件，详细内容见后文 [启动命令配置](./java-maven#启动命令配置) 章节。
 
 #### 通过代码设置(推荐)
 
-Rainbond 支持将上述的所有配置通过代码进行定义。这样做的好处是：通过在源代码仓库加入若干配置文件，完成编译运行环境的定义，不需要任何手动配置，完成自动 CI。
+应用上云平台 支持将上述的所有配置通过代码进行定义。这样做的好处是：通过在源代码仓库加入若干配置文件，完成编译运行环境的定义，不需要任何手动配置，完成自动 CI。
 
 **system.properties**
 
@@ -97,7 +97,7 @@ maven.version=3.3.1
 
 在源代码根目录下加入用户本地构建可用的 [settings.xml](http://maven.apache.org/settings.html) 文件，即可完全模拟用户的本地构建设置，包括 **仓库私服设置**。该文件通常位于用户环境的 `${M2_HOME}/conf` 或者 `${HOME}/.m2` 目录下，用户本地构建使用的配置，均可在其中进行定义。
 
-在即将到来的 `Rainbond v5.2.2` 版本中， `settings.xml` 的设置，会添加到图形化设置中去。
+在即将到来的 `应用上云平台 v5.2.2` 版本中， `settings.xml` 的设置，会添加到图形化设置中去。
 
 **mvnw**
 
@@ -107,7 +107,7 @@ maven.version=3.3.1
 
 在源代码根目录下加入 [rainbondfile](../rainbondfile) 可以为服务组件定义环境变量，构建过程中更多的配置，可以通过环境变量的方式定义。
 
-在 Rainbond 源码构建的过程中，为服务组件定义的 `BUILD_` 开头的变量，可以被传入构建环境中使用。部分常用的环境变量如下:
+在 应用上云平台 源码构建的过程中，为服务组件定义的 `BUILD_` 开头的变量，可以被传入构建环境中使用。部分常用的环境变量如下:
 
 |          环境变量          |             默认值              |                    说明                    |
 | :------------------------: | :-----------------------------: | :----------------------------------------: |
@@ -124,11 +124,11 @@ maven.version=3.3.1
 
 ### 启动命令配置
 
-Java Maven 源码构建过程完成后，Rainbond 会自动将服务组件运行起来，这需要我们事先指定服务组件的启动命令。
+Java Maven 源码构建过程完成后，应用上云平台 会自动将服务组件运行起来，这需要我们事先指定服务组件的启动命令。
 
 #### Procfile 规范
 
-Rainbond 通过源代码根目录下的 `Procfile` 文件来定义项目启动命令，`Procfile` 文件定义规范详见 [Procfile](../procfile) 。
+应用上云平台 通过源代码根目录下的 `Procfile` 文件来定义项目启动命令，`Procfile` 文件定义规范详见 [Procfile](../procfile) 。
 
 服务组件构建源页面中可以图形化输入启动命令，这里输入的命令格式要求与 `Procfile` 一致，优先级高于源代码根目录中的 `Procfile` 。输入完成后，下一次构建当前服务组件时生效。
 
@@ -232,5 +232,5 @@ web: java -Dserver.port=$PORT $JAVA_OPTS -jar target/*.jar
 - [Tomcat 配置 Redis 实现 Session 共享](./tomcat-redis-session/)
 - [webapp-runner 使用说明](./webapp-runner/)
 
-<!-- - [RAINBOND 源码构建 JAVA 项目选取 JDK](../advanced-scenarios/devops/how-to-select-jdk/)
-- [Rainbond 源码构建 JAVA 项目配置 Maven 仓库](../advanced-scenarios/devops/how-to-config-maven/) -->
+<!-- - [应用上云平台 源码构建 JAVA 项目选取 JDK](../advanced-scenarios/devops/how-to-select-jdk/)
+- [应用上云平台 源码构建 JAVA 项目配置 Maven 仓库](../advanced-scenarios/devops/how-to-config-maven/) -->

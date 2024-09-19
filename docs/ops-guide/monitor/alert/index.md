@@ -1,20 +1,20 @@
 ---
 title: 告警配置
-description: 介绍 Rainbond 配置告警规则以及告警通知
+description: 介绍 应用上云平台 配置告警规则以及告警通知
 keywords:
 - prometheus
 - alertmanager
 - alertmanager 告警配置
 ---
 
-介绍 Rainbond 如何自定义告警规则和配置告警通知，告警通知支持邮件、钉钉、企业微信。
+介绍 应用上云平台 如何自定义告警规则和配置告警通知，告警通知支持邮件、钉钉、企业微信。
 ## 自定义告警
 
 ### 前提
 
-* [监控告警服务部署](ops-guide/monitor/monitor-alert-deploy)
+* [监控告警服务部署](/ops-guide/monitor/monitor-alert-deploy)
 * [添加业务监控](https://www.rainbond.com/blog/JmxExporter)
-* 安装 [kubectl](ops-guide/tools/#kubectl-cli) 命令行工具
+* 安装 [kubectl](/ops-guide/tools/#kubectl-cli) 命令行工具
 ### 准备配置文件
 
 配置示例：
@@ -34,7 +34,7 @@ data:
         expr: up{job="ceshi"}==0
         for: 20s
         labels:
-          Alert: Rainbond
+          Alert: 应用上云平台
           PageAlarm: "true"
           Region: default
         annotations:

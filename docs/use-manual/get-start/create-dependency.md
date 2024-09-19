@@ -8,21 +8,21 @@ description: 不修改代码实现 Service Mesh 微服务架构
 
 通过文档学习如何快速建立服务组件的依赖关系。
 
-Rainbond 支持原生的 Service Mesh 微服务架构，应用一旦部署到 Rainbond 平台上，就已经接入了这一微服务架构。
+应用上云平台 支持原生的 Service Mesh 微服务架构，应用一旦部署到 应用上云平台 平台上，就已经接入了这一微服务架构。
 
-经过了 [从源码部署一个服务组件](use-manual/get-start/create-app-from-source/) 以及 [从应用市场部署一个应用](use-manual/get-start/create-app-from-market/)，我们已经成功的部署了两个服务组件，现在，我们来创建他们之间的依赖关系。
+经过了 [从源码部署一个服务组件](/use-manual/get-start/create-app-from-source/) 以及 [从应用市场部署一个应用](/use-manual/get-start/create-app-from-market/)，我们已经成功的部署了两个服务组件，现在，我们来创建他们之间的依赖关系。
 
 这么做的意义，是让 **Java 演示示例** 可以和 **Mysql5.7（单机版）** 通信，业务层面可以正常调用数据库。
 
 ### 意义
 
-通过实操，用户可以初步体会到服务组件在 Rainbond 中如何通信。用户需要阅读 [组件间通信](micro-service/service-mesh/connection_env) 来了解其中的原理。
+通过实操，用户可以初步体会到服务组件在 应用上云平台 中如何通信。用户需要阅读 [组件间通信](/micro-service/service-mesh/connection_env) 来了解其中的原理。
 
 ### 前提条件
 
-- 完成 [从源码部署一个服务组件](use-manual/get-start/create-app-from-source/) 获得 **Java 演示示例**。
+- 完成 [从源码部署一个服务组件](/use-manual/get-start/create-app-from-source/) 获得 **Java 演示示例**。
 
-- 完成 [从应用市场部署一个应用](use-manual/get-start/create-app-from-market/) 获得 **Mysql5.7（单机版）**。
+- 完成 [从应用市场部署一个应用](/use-manual/get-start/create-app-from-market/) 获得 **Mysql5.7（单机版）**。
 
 ### 建立依赖关系
 
@@ -44,4 +44,4 @@ Rainbond 支持原生的 Service Mesh 微服务架构，应用一旦部署到 Ra
 
 ### 下一步
 
-接下来，我们会探索如何将当前这组用户自己制作的应用，发布到 Rainbond 提供的应用市场中，形成自己的应用模版。
+接下来，我们会探索如何将当前这组用户自己制作的应用，发布到 应用上云平台 提供的应用市场中，形成自己的应用模版。

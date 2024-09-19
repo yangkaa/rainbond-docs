@@ -1,6 +1,6 @@
 ---
 title: 静态HTML
-description: 静态Html语言类型Rainbond支持规范介绍
+description: 静态Html语言类型应用上云平台支持规范介绍
 ---
 
 #### 静态 HTML 识别策略

@@ -2,19 +2,19 @@
 title: 修改安装所需的默认端口
 descrition: 该章节文档适用于运维人员了解如何修改安装时所需的默认端口。
 keywords:
-- Rainbond 修改安装时默认的端口
-- 修改 Rainbond 80 443 8443 6060 端口
+- 应用上云平台 修改安装时默认的端口
+- 修改 应用上云平台 80 443 8443 6060 端口
 ---
 
-在 Rainbond 安装过程中，需要使用到 80、443、8443、6060 端口，如果这些端口已经被占用，可以修改安装时所需的默认端口。
+在 应用上云平台 安装过程中，需要使用到 80、443、8443、6060 端口，如果这些端口已经被占用，可以修改安装时所需的默认端口。
 
-* **80、443:** 是 Rainbond 网关的默认端口，用于外部访问。
-* **8443:** 是 Rainbond 的 API 端口，用于与控制台与集群端通信。
-* **6060:** 是 Rainbond 的 Websocket 端口，用于组件的 Web 终端命令行以及实时推送日志等。
+* **80、443:** 是 应用上云平台 网关的默认端口，用于外部访问。
+* **8443:** 是 应用上云平台 的 API 端口，用于与控制台与集群端通信。
+* **6060:** 是 应用上云平台 的 Websocket 端口，用于组件的 Web 终端命令行以及实时推送日志等。
 
 ## 前提
 
-* 使用 [Helm 安装 Rainbond](installation/install-with-helm/)。
+* 使用 [Helm 安装 应用上云平台](/installation/install-with-helm/)。
 
 ## 操作步骤
 
@@ -52,21 +52,21 @@ Component:
   * API_PORT：定义 Operator 创建 API 的 Service 和 Ingress 端口。
   * API_WS_PORT：定义 Operator 创建 API Websocket 的 Service 和 Ingress 端口。
 * **enableEnvCheck** 用于关闭环境检查，默认会检测 80、443、8443、6060 端口是否被占用，如果被占用则会安装失败。如果设置为 `false`，则不会检测端口占用。
-* **--service-http-port** 用于修改 Rainbond 网关的 HTTP 端口。
-* **--service-https-port** 用于修改 Rainbond 网关的 HTTPS 端口。
-* **--api-addr-ssl** 用于修改 Rainbond 的 API 端口。
-* **--ws-addr** 用于修改 Rainbond 的 Websocket 端口。
+* **--service-http-port** 用于修改 应用上云平台 网关的 HTTP 端口。
+* **--service-https-port** 用于修改 应用上云平台 网关的 HTTPS 端口。
+* **--api-addr-ssl** 用于修改 应用上云平台 的 API 端口。
+* **--ws-addr** 用于修改 应用上云平台 的 Websocket 端口。
 
-更多 Helm 安装参数请参考 [Chart 安装选项](installation/install-with-helm/vaules-config)。
+更多 Helm 安装参数请参考 [Chart 安装选项](/installation/install-with-helm/vaules-config)。
 
-参考 [基于 Kubernetes 安装](installation/install-with-helm/install-from-kubernetes)。
+参考 [基于 Kubernetes 安装](/installation/install-with-helm/install-from-kubernetes)。
 
 安装时需要使用 `-f values.yaml` 参数指定配置文件。
 
 ### 修改私有镜像配置
 
 :::tip
-建议指定外部镜像仓库，下述操作就可跳过，可参考 [Chart 安装选项](installation/install-with-helm/vaules-config)配置外部镜像仓库。
+建议指定外部镜像仓库，下述操作就可跳过，可参考 [Chart 安装选项](/installation/install-with-helm/vaules-config)配置外部镜像仓库。
 :::
 默认的私有镜像仓库的访问地址为 `goodrain.me`，是由 `rbd-gateway` 代理访问的，修改网关默认的 `80 443` 端口之后，无法通过 `goodrain.me` 访问到私有镜像仓库，需要修改私有镜像仓库的访问地址为 `goodrain.me:<PORT>`。
 
@@ -100,5 +100,5 @@ spec:
 ```
 
 :::tip
-等待安装完成访问 Rainbond 控制台，参考 [安装进度查询](installation/install-with-helm/install-from-kubernetes)。
+等待安装完成访问 应用上云平台 控制台，参考 [安装进度查询](/installation/install-with-helm/install-from-kubernetes)。
 :::

@@ -1,8 +1,8 @@
 ---
 title: 调整 Docker 容器日志收集
-descrition: 该章节介绍调整了 Docker 的默认数据目录后，如何调整 Rainbond 组件的参数收集日志。
+descrition: 该章节介绍调整了 Docker 的默认数据目录后，如何调整 应用上云平台 组件的参数收集日志。
 keywords:
-- Rainbond 调整 Docker 容器日志收集
+- 应用上云平台 调整 Docker 容器日志收集
 - 调整 Docker 容器日志收集
 ---
 

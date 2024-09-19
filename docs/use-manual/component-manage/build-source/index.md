@@ -1,9 +1,9 @@
 ---
 title: 构建源管理
-description: 本文讲解Rainbond组件各类型构建源管理方式，包括更改代码地址、分支、账号密码，设置构建参数等功能
+description: 本文讲解应用上云平台组件各类型构建源管理方式，包括更改代码地址、分支、账号密码，设置构建参数等功能
 ---
 
-Rainbond 组件创建有三种模式：[源码](use-manual/component-create/language-support/java/java-maven)、[镜像](use-manual/component-create/image-support/image)和应用市场，不同的创建方式对应组件不同的构建源类型。 对于开发者来说可能需要经常修改代码分支、镜像 Tag，构建环境参数等。这些需求通过对组件构建源的相关设置完成。
+应用上云平台 组件创建有三种模式：[源码](/use-manual/component-create/language-support/java/java-maven)、[镜像](/use-manual/component-create/image-support/image)和应用市场，不同的创建方式对应组件不同的构建源类型。 对于开发者来说可能需要经常修改代码分支、镜像 Tag，构建环境参数等。这些需求通过对组件构建源的相关设置完成。
 
 - 源码
 
@@ -17,13 +17,13 @@ Rainbond 组件创建有三种模式：[源码](use-manual/component-create/lang
 
 ## 构建源检测
 
-组件创建时对构建源进行语言检测，在后续的持续开发中，如果源码更改了语言类型，比如从 Java-Maven 类型更改为 Dockerfile 类型，需用执行重新检测源码操作，让 Rainbond 重新设定组件的编译方式才能生效。
+组件创建时对构建源进行语言检测，在后续的持续开发中，如果源码更改了语言类型，比如从 Java-Maven 类型更改为 Dockerfile 类型，需用执行重新检测源码操作，让 应用上云平台 重新设定组件的编译方式才能生效。
 
-> Rainbond 在源码编译过程中不会重新识别语言类型，因此如果组件源码的语言类型发生改变必须重新进行构建源检测。
+> 应用上云平台 在源码编译过程中不会重新识别语言类型，因此如果组件源码的语言类型发生改变必须重新进行构建源检测。
 
 ## 自动构建设置
 
-自动构建即通过一种方式自动触发 Rainbond 组件版本构建的操作，详细文档见 组件自动构建
+自动构建即通过一种方式自动触发 应用上云平台 组件版本构建的操作，详细文档见 组件自动构建
 
 ## 构建参数设置
 

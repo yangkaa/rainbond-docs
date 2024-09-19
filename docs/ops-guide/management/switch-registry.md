@@ -2,11 +2,11 @@
 title: 修改集群镜像仓库
 descrition: 介绍如何更改集群默认镜像仓库
 keywords:
-- Rainbond 集群镜像仓库修改
+- 应用上云平台 集群镜像仓库修改
 ---
 
 :::tip
-如果在安装时没有配置镜像仓库相关信息，那么 Rainbond 默认会安装一个私有镜像仓库 rbd-hub，用于存储构建镜像。如果在安装时配置了镜像仓库相关信息，那么 Rainbond 将使用配置的镜像仓库。
+如果在安装时没有配置镜像仓库相关信息，那么 应用上云平台 默认会安装一个私有镜像仓库 rbd-hub，用于存储构建镜像。如果在安装时配置了镜像仓库相关信息，那么 应用上云平台 将使用配置的镜像仓库。
 :::
 
 本文将介绍在安装集群后修改镜像仓库的两种场景：
@@ -84,7 +84,7 @@ metadata:
   namespace: rbd-system
   labels:
     belongTo: rainbond-operator
-    creator: Rainbond
+    creator: 应用上云平台
     name: rbd-hub
     priorityComponent: "true"
     persistentVolumeClaimAccessModes: ReadWriteOnce

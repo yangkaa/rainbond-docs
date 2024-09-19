@@ -6,7 +6,7 @@ description: 讲解如何使用数据库插件
 数据库的备份与恢复插件基于 [Percona XtraBackup](https://www.percona.com/software/mysql-database/percona-xtrabackup) 实现，支持 MySQL 数据库物理热备与完全恢复。
 
 
-对于很多使用Rainbond平台的用户来说，部署应用时不可避免的会使用到Mysql数据库，对于数据库来说，保证数据的可用性是至关重要的，在此基础上，Rainbond官方制作了Mysql数据库的备份及恢复插件。
+对于很多使用应用上云平台平台的用户来说，部署应用时不可避免的会使用到Mysql数据库，对于数据库来说，保证数据的可用性是至关重要的，在此基础上，应用上云平台官方制作了Mysql数据库的备份及恢复插件。
 
 #### 制作方式
 
@@ -52,7 +52,7 @@ Mysql恢复插件选择的是初始化类型插件，初始化插件不同于其
 
 ##### 镜像制作
 
-相关Dockerfile及脚本请参考[Rainbond官方项目](https://github.com/goodrain-apps/percona-xtrabackup.git)的```addone-mysql-backup```和```addone-mysql-restore```分支
+相关Dockerfile及脚本请参考[应用上云平台官方项目](https://github.com/goodrain-apps/percona-xtrabackup.git)的```addone-mysql-backup```和```addone-mysql-restore```分支
 
 ###### 备份插件主要流程说明
 
@@ -245,7 +245,7 @@ fi
 
 ##### 插件制作
 
-Rainbond:5.2版本的插件制作
+应用上云平台:5.2版本的插件制作
 
 登录控制台>>进入团队视图>>插件>>新建插件
 

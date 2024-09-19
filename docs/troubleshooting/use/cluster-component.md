@@ -1,11 +1,11 @@
 ---
 title: 集群组件异常排查
-description: 介绍 Rainbond 集群组件出现的问题及其排查思路
+description: 介绍 应用上云平台 集群组件出现的问题及其排查思路
 keywords: 
-- Rainbond 集群组件异常排查
+- 应用上云平台 集群组件异常排查
 ---
 
-本文介绍 Rainbond 集群组件出现的问题及其排查思路。
+本文介绍 应用上云平台 集群组件出现的问题及其排查思路。
 
 ## 排查思路
 
@@ -26,7 +26,7 @@ websocketproxy: Error when copying from client to backend: websocket: close 1006
 
 ### rbd-monitor 服务异常
 
-rbd-monitor 一直处于 0/1 状态，该状态下，Rainbond 的应用视图将无法正常展示，因为无法获取到对应的应用指标数据。
+rbd-monitor 一直处于 0/1 状态，该状态下，应用上云平台 的应用视图将无法正常展示，因为无法获取到对应的应用指标数据。
 
 通常，这种情况下，需要检查 `rbd-monitor` 的日志，查看是否有报错信息。
 

@@ -1,11 +1,11 @@
 ---
 title: Dockerfile
-description: Dockerfile语言类型Rainbond支持规范介绍
+description: Dockerfile语言类型应用上云平台支持规范介绍
 ---
 
 #### Dockerfile 类型识别策略
 
-代码主目录下有 `Dockerfile` 文件，Rainbond 会识别代码语言类型为 **Dockerfile** ，此策略优先级最高，当代码同时符合其他语言类型识别策略时，依然以**Dockerfile**为主。
+代码主目录下有 `Dockerfile` 文件，应用上云平台 会识别代码语言类型为 **Dockerfile** ，此策略优先级最高，当代码同时符合其他语言类型识别策略时，依然以**Dockerfile**为主。
 
 #### 编译原理
 
@@ -17,7 +17,7 @@ description: Dockerfile语言类型Rainbond支持规范介绍
 
 **Dockerfile** 是由一系列命令和参数构成的脚本，这些命令应用于基础镜像并最终创建一个新的镜像。
 
-Rainbond 在源码检测阶段会读取 Dockerfile 定义的如下参数：
+应用上云平台 在源码检测阶段会读取 Dockerfile 定义的如下参数：
 
 | 参数类型 | 名称       | 说明                           |
 | -------- | ---------- | ------------------------------ |

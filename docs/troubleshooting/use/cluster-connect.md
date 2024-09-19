@@ -1,17 +1,17 @@
 ---
 title: 集群通信异常排查
-description: 介绍 Rainbond 集群出现的问题及其排查思路
+description: 介绍 应用上云平台 集群出现的问题及其排查思路
 keywords: 
-- Rainbond 集群通信异常排查
+- 应用上云平台 集群通信异常排查
 ---
 
-本文介绍 Rainbond 控制台与集群端通信异常的排查思路。
+本文介绍 应用上云平台 控制台与集群端通信异常的排查思路。
 
 ## 集群通信异常或集群端失去响应
 
 ![](https://static.goodrain.com/docs/5.12/troubleshooting/installation/cluster-connect.png)
 
-Rainbond 分为两层架构，控制台与集群端。控制台与集群端通过 API 进行通信，如果控制台与集群端通信异常，将会导致控制台无法正常使用。
+应用上云平台 分为两层架构，控制台与集群端。控制台与集群端通过 API 进行通信，如果控制台与集群端通信异常，将会导致控制台无法正常使用。
 
 导致异常原因可能有以下几种：
 

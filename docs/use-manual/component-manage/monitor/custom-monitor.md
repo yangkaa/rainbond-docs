@@ -6,11 +6,11 @@ description: 如何为每一个服务组件定制自己的监控项
 
 ### 基于 Prometheus 的自定义监控
 
-Rainbond 自 V5.3 版本开始，加入了自定义业务监控功能，支持用户通过自定义的 Exporter 插件，实现基于 Prometheus 的自定义业务监控。这一操作需要用户对于 Prometheus 监控体系有比较系统的了解。
+应用上云平台 自 V5.3 版本开始，加入了自定义业务监控功能，支持用户通过自定义的 Exporter 插件，实现基于 Prometheus 的自定义业务监控。这一操作需要用户对于 Prometheus 监控体系有比较系统的了解。
 
 ### MySQLD Exporter
 
-作为示例，Rainbond V5.3 版本安装后自带 MySQLD Exporter 插件，该插件基于标准的 MySQLD Exporter 实现。Rainbond 自带的 Prometheus 监控系统 rbd-monitor 会收集 Exporter 中的数据，并通过监控面板展示出来。
+作为示例，应用上云平台 V5.3 版本安装后自带 MySQLD Exporter 插件，该插件基于标准的 MySQLD Exporter 实现。应用上云平台 自带的 Prometheus 监控系统 rbd-monitor 会收集 Exporter 中的数据，并通过监控面板展示出来。
 
 #### 插件的安装
 
@@ -84,6 +84,6 @@ MySQLD Exporter 插件已经定义好了一组监控点的配置，这组配置�
 
 ### 其他类型业务的自定义监控
 
-对于来自于源码构建的 JAVA 类应用，我们将 exporter 集成在构建过程中，其使用方式参考最佳实践： [为 JAVA 应用自定义监控](https://www.rainbond.com/blog/JmxExporter)
+对于来自于源码构建的 JAVA 类应用，我们将 exporter 集成在构建过程中，其使用方式参考最佳实践： [为 JAVA 应用自定义监控](https://www.应用上云平台.com/blog/JmxExporter)
 
 

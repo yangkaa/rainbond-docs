@@ -6,13 +6,13 @@ keywords:
 - allinone，安装问题排查
 ---
 
-通过快速安装脚本安装的 Rainbond 是属于**单机体验版本**，如果在安装时出现问题，请根据当前的文档进行排查问题。
+通过快速安装脚本安装的 应用上云平台 是属于**单机体验版本**，如果在安装时出现问题，请根据当前的文档进行排查问题。
 
 ## 启动流程
 
 ![dind-process](https://static.goodrain.com/docs/5.12/troubleshooting/installation/dind-process.png)
 
-**Rainbond 单机体验版本** 是将所有的服务都运行在一个容器中，方便用户快速使用，采用了 dind (Docker in Docker) 的技术，所有的排查操作都在 `rainbond-allione` 这个容器环境中进行。
+**应用上云平台 单机体验版本** 是将所有的服务都运行在一个容器中，方便用户快速使用，采用了 dind (Docker in Docker) 的技术，所有的排查操作都在 `rainbond-allione` 这个容器环境中进行。
 
 在整个安装过程中，会按照以下顺序依次启动服务：
 
@@ -23,7 +23,7 @@ keywords:
    * 日志路径：`/app/logs/k3s.log`
 4. 启动 Rainbodn Region。
    * 运行在 K3s 之上，以 POD 运行。
-5. 启动 Rainbond Console，由 **Supervisord** 控制启动。
+5. 启动 应用上云平台 Console，由 **Supervisord** 控制启动。
 
 ## 排查思路
 
@@ -94,7 +94,7 @@ Failed to create cgroup" err="cannot enter cgroupv2 \"/sys/fs/cgroup/kubepods\" 
 ```
 
 :::info
-在早些版本的 rainbond-allinone 中，尚未支持 cgroupv2。而 cgroupv2 在高于 4.2.0 版本的 Docker Desktop 中被应用，这导致了冲突。所以请降级 Docker Desktop 到 4.2.0 版本及以下。或使用最新版本的单机体验版本的 Rainbond。
+在早些版本的 rainbond-allinone 中，尚未支持 cgroupv2。而 cgroupv2 在高于 4.2.0 版本的 Docker Desktop 中被应用，这导致了冲突。所以请降级 Docker Desktop 到 4.2.0 版本及以下。或使用最新版本的单机体验版本的 应用上云平台。
 :::
 
 ```bash
@@ -115,9 +115,9 @@ level=error msg="Failed to set sysctl: open /proc/sys/net/netfilter/nf_conntrack
 主机中的磁盘空间不足，增加磁盘空间或删除不必要的文件释放空间；对于 Docker Desktop 用户而言，可以参考 [Disk utilization](https://docs.docker.com/desktop/mac/space/) 学习变更磁盘空间限额。
 :::
 
-### 启动 Rainbond Region 阶段
+### 启动 应用上云平台 Region 阶段
 
-`rainbond-allinone` 容器中会在 `rbd-system` 命名空间下启动 **Rainbond Region POD**。在终端命令行中执行以下命令获取这些 POD 的信息。
+`rainbond-allinone` 容器中会在 `rbd-system` 命名空间下启动 **应用上云平台 Region POD**。在终端命令行中执行以下命令获取这些 POD 的信息。
 
 ```bash
 kubectl get pod -n rbd-system
@@ -163,9 +163,9 @@ CrashLoopBackOff 状态意味着当前 pod 已经可以正常启动，但是其�
 Evicted 状态意味着当前 pod 遭到了调度系统的驱逐，触发驱逐的原因可能包括根分区磁盘占用率过高、容器运行时数据分区磁盘占用率过高等，根据经验，上述原因最为常见，需要进行磁盘空间清理解除驱逐状态。可以通过执行命令 `kubectl describe node` ，观察返回中的 `Conditions` 段落输出来确定当前节点的状态。
 :::
 
-### 启动 Rainbond Console 阶段
+### 启动 应用上云平台 Console 阶段
 
-`rainbond-allinone` 容器中会启动 Rainbond Console 服务，它是由 `Supervisord` 控制启动。
+`rainbond-allinone` 容器中会启动 应用上云平台 Console 服务，它是由 `Supervisord` 控制启动。
 
 如果需要 Console 无法访问的情况，请排查以下日志分析问题：
 
@@ -176,7 +176,7 @@ Evicted 状态意味着当前 pod 遭到了调度系统的驱逐，触发驱逐�
 
 ## 修改挂载存储目录路径
 
-Rainbond dind 单机体验版默认会将数据存储在两个目录内，容器内数据目录为 `/app/data` `/opt/rainbond`，而宿主机的目录分两种情况：
+应用上云平台 dind 单机体验版默认会将数据存储在两个目录内，容器内数据目录为 `/app/data` `/opt/rainbond`，而宿主机的目录分两种情况：
 
 1. Linux 安装的单机体验版默认的本地数据目录是 `~/rainbonddata` `/opt/rainbond`。
 2. Mac、Windows 安装的单机体验版存在 docker volume 中，可以通过 `docker volume ls` 命令查看，`rainbond-data` `rainbond-opt`。

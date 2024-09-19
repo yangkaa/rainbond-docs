@@ -2,12 +2,12 @@
 title: 调整 BuildKit 构建参数
 descrition: 该章节文档适用于运维人员了解如何指定集群构建
 keywords:
-- Rainbond 集群构建参数
+- 应用上云平台 集群构建参数
 - 调整 BuildKit 构建参数
 ---
 
 :::info
-v5.12.2 版本后，Rainbond 默认使用 BuildKit 进行构建，如果是该版本之前的版本，请参考 [调整 Kaniko 构建参数](https://v5.14-docs.rainbond.com/docs/ops-guide/management/kaniko-args)。
+v5.12.2 版本后，应用上云平台 默认使用 BuildKit 进行构建，如果是该版本之前的版本，请参考 [调整 Kaniko 构建参数](https://v5.14-docs.rainbond.com/docs/ops-guide/management/kaniko-args)。
 :::
 ## 使用自定义私有镜像仓库
 

@@ -6,13 +6,13 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: '云原生应用管理平台',
-  tagline: '云原生应用管理平台',
+  title: '应用上云平台',
+  tagline: '应用上云平台',
   url: '/',
   baseUrl: '/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
-  favicon: 'img/logo.png',
+  favicon: 'img/logo.ico',
   organizationName: 'Cloud Native',
   projectName: 'Cloud Native',
   noIndex: true,
@@ -36,10 +36,10 @@ const config = {
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       navbar: {
-        title: '云原生应用管理平台',
+        title: '应用上云平台',
         logo: {
           alt: 'Logo',
-          src: 'img/logo.png',
+          src: 'img/logo.ico',
         },
         items: [
           {

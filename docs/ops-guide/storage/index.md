@@ -1,6 +1,6 @@
 ---
 title: 存储解决方案
-description: Rainbond存储类型扩充方案说明
+description: 应用上云平台存储类型扩充方案说明
 ---
 
 

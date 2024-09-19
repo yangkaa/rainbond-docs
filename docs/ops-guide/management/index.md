@@ -1,18 +1,18 @@
 ---
-title: Rainbond 组件运维
-descrition: 该章节文档适用于运维人员了解Rainbond集群运维等相关知识
+title: 应用上云平台 组件运维
+descrition: 该章节文档适用于运维人员了解应用上云平台集群运维等相关知识
 keywords:
-- Rainbond 组件运维
-- Rainbond 运维
+- 应用上云平台 组件运维
+- 应用上云平台 运维
 ---
 
-本章主要讲述Rainbond系统组件的常见运维方式，以帮助用户更快速，高效的运维Rainbond。
+本章主要讲述应用上云平台系统组件的常见运维方式，以帮助用户更快速，高效的运维应用上云平台。
 
 
 
 ## 组件信息
 
-各个组件介绍请参见 [Rainbond组件概述](ops-guide/component/)
+各个组件介绍请参见 [应用上云平台组件概述](/ops-guide/component/)
 
 ### 查看组件详细信息
 

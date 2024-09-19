@@ -2,7 +2,7 @@
 title: 钉钉告警
 draft: false
 weight: 1672
-description: Rainbond钉钉报警配置说明
+description: 应用上云平台钉钉报警配置说明
 ---
 
 
@@ -10,7 +10,7 @@ description: Rainbond钉钉报警配置说明
 
 本文主要介绍如何配置Alertmanager发送消息到钉钉。
 
-集群监控报警部署请参见 [集群监控报警部署](ops-guide/monitor/monitor-alert-deploy)
+集群监控报警部署请参见 [集群监控报警部署](/ops-guide/monitor/monitor-alert-deploy)
 
 ### 前提条件
 

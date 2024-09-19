@@ -1,6 +1,6 @@
 ---
 title: 企业微信报警
-description: Rainbond企业微信报警配置说明
+description: 应用上云平台企业微信报警配置说明
 ---
 
 

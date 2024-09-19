@@ -3,7 +3,7 @@ title: 更换 NFS 存储节点
 description: 本文介绍如何将默认的 NFS 存储更换到其他大存储节点上。
 ---
 
-基于主机或 Helm 安装时，Rainbond 在默认情况下会提供一个 NFS Provisioner，用做整个平台的共享存储和组件的存储。该存储数据默认保存在 nfs-provisioner-0 这个 Pod 所在节点的 /opt/rainbond/data/nfs 目录下。但是在一些场景下，这个 Pod 所调度的节点不一定是集群中存储最大的节点。
+基于主机或 Helm 安装时，应用上云平台 在默认情况下会提供一个 NFS Provisioner，用做整个平台的共享存储和组件的存储。该存储数据默认保存在 nfs-provisioner-0 这个 Pod 所在节点的 /opt/rainbond/data/nfs 目录下。但是在一些场景下，这个 Pod 所调度的节点不一定是集群中存储最大的节点。
 
 本文将介绍如何将默认的 NFS 服务切换到其他大存储节点上。
 
@@ -74,7 +74,7 @@ kind: PersistentVolume
 metadata:
   labels:
     belongTo: rainbond-operator
-    creator: Rainbond
+    creator: 应用上云平台
     name: nfs-provisioner
   name: nfs-provisioner
 spec:
@@ -114,7 +114,7 @@ kind: PersistentVolumeClaim
 metadata:
   labels:
     belongTo: rainbond-operator
-    creator: Rainbond
+    creator: 应用上云平台
     name: nfs-provisioner
   name: data-nfs-provisioner-0
   namespace: rbd-system

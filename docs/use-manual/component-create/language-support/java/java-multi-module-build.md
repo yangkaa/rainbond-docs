@@ -1,11 +1,11 @@
 ---
 title: 'Java Maven 多模块源码构建'
-description: 'Rainbond Java源码多模块构建'
+description: '应用上云平台 Java源码多模块构建'
 ---
 
 ### Maven 多模块项目构建识别策略
 
-Maven 多模块项目是根据 pom.xml 文件(下面简称 pom)来划分的, Rainbond 对它的识别也是建立在 pom 的基础上的. 主要是识别出具体模块(module)的构建命令和启动命令. 构建命令的作用是指定需要构建的模块, 是类似于 "mvn install -pl 'module name' -am" 的 mvn 命令. 启动命令的作用是在构建完成后, 指定需要执行的 Jar 包, 是类似于 "web: java $JAVA_OPTS -jar \*.jar" 的命令.
+Maven 多模块项目是根据 pom.xml 文件(下面简称 pom)来划分的, 应用上云平台 对它的识别也是建立在 pom 的基础上的. 主要是识别出具体模块(module)的构建命令和启动命令. 构建命令的作用是指定需要构建的模块, 是类似于 "mvn install -pl 'module name' -am" 的 mvn 命令. 启动命令的作用是在构建完成后, 指定需要执行的 Jar 包, 是类似于 "web: java $JAVA_OPTS -jar \*.jar" 的命令.
 
 识别策略:
 
@@ -19,11 +19,11 @@ Maven 多模块项目是根据 pom.xml 文件(下面简称 pom)来划分的, Rai
 
 ### 多模块项目源码规范
 
-因为 Rainbond 对 Maven 多模块项目的识别是建立在 pom 的基础上的, 所以大家在书写的 pom.xml 文件, 符合 pom 的规范就好. pom 的规范请参考: [POM Reference](https://maven.apache.org/pom.html)
+因为 应用上云平台 对 Maven 多模块项目的识别是建立在 pom 的基础上的, 所以大家在书写的 pom.xml 文件, 符合 pom 的规范就好. pom 的规范请参考: [POM Reference](https://maven.apache.org/pom.html)
 
 ### 案例
 
-这里以[SPRING CLOUD 微服务部署在 RAINBOND 的案例](micro-service/example/pig)一文中的 Pig 项目中 Java 源码部署部分为例，一次性多模块部署 Pig 项目(其他依赖如 Mysql 默认安装好)。
+这里以[SPRING CLOUD 微服务部署在 应用上云平台 的案例](/micro-service/example/pig)一文中的 Pig 项目中 Java 源码部署部分为例，一次性多模块部署 Pig 项目(其他依赖如 Mysql 默认安装好)。
 
 #### 模块构建
 
@@ -41,7 +41,7 @@ Maven 多模块项目是根据 pom.xml 文件(下面简称 pom)来划分的, Rai
 <img src="https://grstatic.oss-cn-shanghai.aliyuncs.com/images/5.1/java-multi-module-build/dmk02.jpg
 " width="100%" />
 
-- 3. 根据**Spring Cloud 微服务部署在 RAINBOND 的案例**一文可知如下组件需要部署运行, 勾选后构建
+- 3. 根据**Spring Cloud 微服务部署在 应用上云平台 的案例**一文可知如下组件需要部署运行, 勾选后构建
 
 <img src="https://grstatic.oss-cn-shanghai.aliyuncs.com/images/5.1/java-multi-module-build/dmk03.jpg
 " width="100%" />
@@ -59,4 +59,4 @@ Maven 多模块项目是根据 pom.xml 文件(下面简称 pom)来划分的, Rai
 <img src="https://grstatic.oss-cn-shanghai.aliyuncs.com/images/5.1/java-multi-module-build/dmk06.jpg
 " width="100%" />
 
-> 这样 Pig 项目多模块构建就完成了，后续其他步骤参考[SPRING CLOUD 微服务部署在 RAINBOND 的案例](micro-service/example/pig)
+> 这样 Pig 项目多模块构建就完成了，后续其他步骤参考[SPRING CLOUD 微服务部署在 应用上云平台 的案例](/micro-service/example/pig)
