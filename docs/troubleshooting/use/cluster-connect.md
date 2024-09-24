@@ -9,8 +9,6 @@ keywords:
 
 ## 集群通信异常或集群端失去响应
 
-![](https://static.goodrain.com/docs/5.12/troubleshooting/installation/cluster-connect.png)
-
 应用上云平台 分为两层架构，控制台与集群端。控制台与集群端通过 API 进行通信，如果控制台与集群端通信异常，将会导致控制台无法正常使用。
 
 导致异常原因可能有以下几种：

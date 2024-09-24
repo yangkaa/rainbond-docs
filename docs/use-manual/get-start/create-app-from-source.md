@@ -30,8 +30,6 @@ description: 基于源代码一键构建并部署业务组件
 
 - **确认创建**
 
-<img src="https://grstatic.oss-cn-shanghai.aliyuncs.com/docs/5.2/get-start/create-app-from-source/build-from-source-1.png" title="创建服务组件" width="100%" />
-
 ### 代码语言识别
 
 应用上云平台 会自动拉取相应的代码，并进行相应的代码检测。用户可以根据检测的结果，初步判断这个流程工作是否正常。

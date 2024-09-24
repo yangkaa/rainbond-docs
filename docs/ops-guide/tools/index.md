@@ -21,9 +21,7 @@ wget https://pkg.goodrain.com/pkg/kubectl/v1.23.10/kubectl -O /usr/local/bin/kub
 wget https://pkg.goodrain.com/pkg/kubectl/v1.23.10/kubectl-arm -O /usr/local/bin/kubectl && chmod +x /usr/local/bin/kubectl
 ```
 
-![](https://static.goodrain.com/images/5.3/kubeconfig.png)
-
-如上图所示，从集群列表中 Copy kubeconfig 文件写到`~/.kube/config`路径下。
+复制集群的 kubeconfig 文件写到`~/.kube/config`路径下。
 
 ```
 mkdir ~/.kube/

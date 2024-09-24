@@ -70,15 +70,7 @@ EXPOSE 3306
 
 使用该项目在平台进行构建，Rainbond 将会自动检测 Dockerfile 中定义的环境变量，存储，端口等信息，对这些配置项进行自动化配置，在 Dockerfile 构建完毕后自动启动数据库。
 
-需要注意的是 MySQL 属于有状态服务，所以在构建前需将组件类型修改为有状态单实例
-
-![advancedsettings](https://grstatic.oss-cn-shanghai.aliyuncs.com/docs/practice/Initdb/advancedsettings.png)
-
-![status](https://grstatic.oss-cn-shanghai.aliyuncs.com/docs/practice/Initdb/status.png)
-
-启动完成，进入运行中状态
-
-![Overview](https://grstatic.oss-cn-shanghai.aliyuncs.com/docs/practice/Initdb/Overview.jpg)
+需要注意的是 MySQL 属于有状态服务，所以在构建前需将组件类型修改为有状态单实例，启动完成，进入运行中状态
 
 通过 Web终端 进入数据库查看相关数据已经完成初始化
 

@@ -16,214 +16,12 @@ const sidebars = {
   docs: [
     {
       type: 'category',
-      label: '使用手册',
+      label: '用户端使用手册',
       link: {
         type: 'doc',
         id: 'use-manual/index'
       },
       items: [
-        {
-          type: 'category',
-          label: '使用入门',
-          link: {
-            type: 'doc',
-            id: 'use-manual/get-start/index'
-          },
-          items: [
-            {
-              type: 'category',
-              label: '学习概念',
-              link: {
-                type: 'doc',
-                id: 'use-manual/get-start/concept/index'
-              },
-              items: [
-                'use-manual/get-start/concept/team',
-                'use-manual/get-start/concept/app',
-                'use-manual/get-start/concept/component',
-                'use-manual/get-start/concept/plugin',
-                'use-manual/get-start/concept/gateway'
-              ]
-            },
-            'use-manual/get-start/team-management-and-multi-tenancy',
-            'use-manual/get-start/create-app-from-source',
-            'use-manual/get-start/create-app-from-market',
-            'use-manual/get-start/create-dependency',
-            'use-manual/get-start/release-to-market',
-            'use-manual/get-start/upgrade-from-market',
-            'use-manual/get-start/offline-delivery-with-market'
-          ]
-        },
-        {
-          type: 'category',
-          label: '部署服务组件',
-          link: {
-            type: 'doc',
-            id: 'use-manual/component-create/index'
-          },
-          items: [
-            'use-manual/component-create/creation-process',
-            {
-              type: 'category',
-              label: '基于源代码创建组件',
-              link: {
-                type: 'doc',
-                id: 'use-manual/component-create/language-support/index'
-              },
-              items: [
-                {
-                  type: 'category',
-                  label: 'Java语言参考',
-                  link: {
-                    type: 'doc',
-                    id: 'use-manual/component-create/language-support/java/index'
-                  },
-                  items: [
-                    'use-manual/component-create/language-support/java/java-maven',
-                    'use-manual/component-create/language-support/java/java-multi-module-build',
-                    'use-manual/component-create/language-support/java/java-jar',
-                    'use-manual/component-create/language-support/java/java-war',
-                    'use-manual/component-create/language-support/java/java-gradle',
-                    'use-manual/component-create/language-support/java/java-maven-de',
-                    'use-manual/component-create/language-support/java/tomcat-redis-session',
-                    'use-manual/component-create/language-support/java/webapp-runner'
-                  ]
-                },
-                'use-manual/component-create/language-support/dockefile',
-                'use-manual/component-create/language-support/python',
-                'use-manual/component-create/language-support/php',
-                'use-manual/component-create/language-support/netcore',
-                'use-manual/component-create/language-support/golang',
-                'use-manual/component-create/language-support/html',
-                'use-manual/component-create/language-support/nodejs',
-                'use-manual/component-create/language-support/nodejs-static',
-                'use-manual/component-create/language-support/slugignore',
-                'use-manual/component-create/language-support/procfile',
-                'use-manual/component-create/language-support/rainbondfile',
-                'use-manual/component-create/language-support/envs'
-              ]
-            },
-            {
-              type: 'category',
-              label: '基于Docker镜像创建组件',
-              link: {
-                type: 'doc',
-                id: 'use-manual/component-create/image-support/index'
-              },
-              items: [
-                'use-manual/component-create/image-support/docker-compose',
-                'use-manual/component-create/image-support/image'
-              ]
-            },
-            {
-              type: 'category',
-              label: '接入外部服务作为第三方组件',
-              link: {
-                type: 'doc',
-                id: 'use-manual/component-create/thirdparty-service/index'
-              },
-              items: [
-                'use-manual/component-create/thirdparty-service/thirdparty-define',
-                'use-manual/component-create/thirdparty-service/thirdparty-design',
-                'use-manual/component-create/thirdparty-service/thirdparty-create'
-              ]
-            },
-            {
-              type: 'category',
-              label: '本地文件创建组件',
-              link: {
-                type: 'doc',
-                id: 'use-manual/component-create/package-support/index'
-              },
-              items: [
-                'use-manual/component-create/package-support/jar-war',
-              ]
-            },
-            'kubernetes-native-guide/helm/export-chart',
-          ]
-        },
-        {
-          type: 'category',
-          label: '组件管理',
-          link: {
-            type: 'doc',
-            id: 'use-manual/component-manage/index'
-          },
-          items: [
-            {
-              type: 'category',
-              label: '组件总览',
-              link: {
-                type: 'doc',
-                id: 'use-manual/component-manage/overview/index'
-              },
-              items: [
-                'use-manual/component-manage/overview/basic-operation',
-                'use-manual/component-manage/overview/service-properties',
-              ]
-            },
-            {
-              type: 'category',
-              label: '组件监控',
-              link: {
-                type: 'doc',
-                id: 'use-manual/component-manage/monitor/index'
-              },
-              items: [
-                'use-manual/component-manage/monitor/service-monitor',
-                'use-manual/component-manage/monitor/custom-monitor',
-              ]
-            },
-            'use-manual/component-manage/service-log',
-            {
-              type: 'category',
-              label: '组件伸缩',
-              link: {
-                type: 'doc',
-                id: 'use-manual/component-manage/automatic-telescoping/index'
-              },
-              items: [
-                'use-manual/component-manage/automatic-telescoping/service-auto-scaling'
-              ]
-            },
-            {
-              type: 'category',
-              label: '组件环境配置',
-              link: {
-                type: 'doc',
-                id: 'use-manual/component-manage/env/index'
-              },
-              items: [
-                'use-manual/component-manage/env/advanced-env'
-              ]
-            },
-            {
-              type: 'category',
-              label: '组件存储',
-              link: {
-                type: 'doc',
-                id: 'use-manual/component-manage/custom-volume/index'
-              },
-              items: [
-                'use-manual/component-manage/custom-volume/service-volume-custom'
-              ]
-            },
-            'use-manual/component-manage/service-port-domain',
-            'use-manual/component-manage/service-plugins',
-            {
-              type: 'category',
-              label: '组件构建源',
-              link: {
-                type: 'doc',
-                id: 'use-manual/component-manage/build-source/index'
-              },
-              items: [
-                'use-manual/component-manage/build-source/change_source_type'
-              ]
-            },
-            'use-manual/component-manage/other/index'
-          ]
-        },
         {
           type: 'category',
           label: '应用管理',
@@ -246,9 +44,9 @@ const sidebars = {
             },
             'use-manual/app-manage/share-app',
             {
-              type: 'link',
-              label: '应用网关',
-              href: '/use-manual/team-manage/gateway/',
+              type: 'doc',
+              label: '网关管理',
+              id: 'use-manual/team-manage/gateway/rules/domain',
             },
             {
               type: 'category',
@@ -261,9 +59,229 @@ const sidebars = {
                 'use-manual/app-manage/app-upgrade/upgrade-app',
               ]
             },
+            {
+              type: 'doc',
+              label: '资源管理',
+              id: 'k8s_resources/index',
+            },
+            'use-manual/app-manage/app-bak',
             'use-manual/app-manage/config-group',
           ]
         },
+        {
+          type: 'category',
+          label: '网关管理',
+          link: {
+            type: 'doc',
+            id: 'use-manual/team-manage/gateway/index'
+          },
+          items: [
+            {
+              type: 'category',
+              label: '访问策略管理',
+              link: {
+                type: 'doc',
+                id: 'use-manual/team-manage/gateway/rules/index'
+              },
+              items: [
+                'use-manual/team-manage/gateway/rules/domain',
+                'use-manual/team-manage/gateway/rules/tcpip',
+              ]
+            },
+            'use-manual/team-manage/gateway/certs/index',
+          ]
+        },
+        {
+          type: 'category',
+          label: '插件管理',
+          link: {
+            type: 'doc',
+            id: 'use-manual/team-manage/plugin-manage/index'
+          },
+          items: [
+            'use-manual/team-manage/plugin-manage/plugin-design-develop',
+            'use-manual/team-manage/plugin-manage/new-plugin',
+            'use-manual/team-manage/plugin-manage/tcm-plugin',
+          ]
+        },
+        {
+          type: 'doc',
+          label: '组件库',
+          id: 'component_library/index',
+        },
+        'use-manual/team-manage/apply_record',
+        'use-manual/team-manage/putaway',
+        'use-manual/team-manage/team_manage',
+        // {
+        //   type: 'category',
+        //   label: '部署服务组件',
+        //   link: {
+        //     type: 'doc',
+        //     id: 'use-manual/component-create/index'
+        //   },
+        //   items: [
+        //     'use-manual/component-create/creation-process',
+        //     {
+        //       type: 'category',
+        //       label: '基于源代码创建组件',
+        //       link: {
+        //         type: 'doc',
+        //         id: 'use-manual/component-create/language-support/index'
+        //       },
+        //       items: [
+        //         {
+        //           type: 'category',
+        //           label: 'Java语言参考',
+        //           link: {
+        //             type: 'doc',
+        //             id: 'use-manual/component-create/language-support/java/index'
+        //           },
+        //           items: [
+        //             'use-manual/component-create/language-support/java/java-maven',
+        //             'use-manual/component-create/language-support/java/java-multi-module-build',
+        //             'use-manual/component-create/language-support/java/java-jar',
+        //             'use-manual/component-create/language-support/java/java-war',
+        //             'use-manual/component-create/language-support/java/java-gradle',
+        //             'use-manual/component-create/language-support/java/java-maven-de',
+        //             'use-manual/component-create/language-support/java/tomcat-redis-session',
+        //             'use-manual/component-create/language-support/java/webapp-runner'
+        //           ]
+        //         },
+        //         'use-manual/component-create/language-support/dockefile',
+        //         'use-manual/component-create/language-support/python',
+        //         'use-manual/component-create/language-support/php',
+        //         'use-manual/component-create/language-support/netcore',
+        //         'use-manual/component-create/language-support/golang',
+        //         'use-manual/component-create/language-support/html',
+        //         'use-manual/component-create/language-support/nodejs',
+        //         'use-manual/component-create/language-support/nodejs-static',
+        //         'use-manual/component-create/language-support/slugignore',
+        //         'use-manual/component-create/language-support/procfile',
+        //         'use-manual/component-create/language-support/rainbondfile',
+        //         'use-manual/component-create/language-support/envs'
+        //       ]
+        //     },
+        //     {
+        //       type: 'category',
+        //       label: '基于Docker镜像创建组件',
+        //       link: {
+        //         type: 'doc',
+        //         id: 'use-manual/component-create/image-support/index'
+        //       },
+        //       items: [
+        //         'use-manual/component-create/image-support/docker-compose',
+        //         'use-manual/component-create/image-support/image'
+        //       ]
+        //     },
+        //     {
+        //       type: 'category',
+        //       label: '接入外部服务作为第三方组件',
+        //       link: {
+        //         type: 'doc',
+        //         id: 'use-manual/component-create/thirdparty-service/index'
+        //       },
+        //       items: [
+        //         'use-manual/component-create/thirdparty-service/thirdparty-define',
+        //         'use-manual/component-create/thirdparty-service/thirdparty-design',
+        //         'use-manual/component-create/thirdparty-service/thirdparty-create'
+        //       ]
+        //     },
+        //     {
+        //       type: 'category',
+        //       label: '本地文件创建组件',
+        //       link: {
+        //         type: 'doc',
+        //         id: 'use-manual/component-create/package-support/index'
+        //       },
+        //       items: [
+        //         'use-manual/component-create/package-support/jar-war',
+        //       ]
+        //     },
+        //     'kubernetes-native-guide/helm/export-chart',
+        //   ]
+        // },
+        // {
+        //   type: 'category',
+        //   label: '组件管理',
+        //   link: {
+        //     type: 'doc',
+        //     id: 'use-manual/component-manage/index'
+        //   },
+        //   items: [
+        //     {
+        //       type: 'category',
+        //       label: '组件总览',
+        //       link: {
+        //         type: 'doc',
+        //         id: 'use-manual/component-manage/overview/index'
+        //       },
+        //       items: [
+        //         'use-manual/component-manage/overview/basic-operation',
+        //         'use-manual/component-manage/overview/service-properties',
+        //       ]
+        //     },
+        //     {
+        //       type: 'category',
+        //       label: '组件监控',
+        //       link: {
+        //         type: 'doc',
+        //         id: 'use-manual/component-manage/monitor/index'
+        //       },
+        //       items: [
+        //         'use-manual/component-manage/monitor/service-monitor',
+        //         'use-manual/component-manage/monitor/custom-monitor',
+        //       ]
+        //     },
+        //     'use-manual/component-manage/service-log',
+        //     {
+        //       type: 'category',
+        //       label: '组件伸缩',
+        //       link: {
+        //         type: 'doc',
+        //         id: 'use-manual/component-manage/automatic-telescoping/index'
+        //       },
+        //       items: [
+        //         'use-manual/component-manage/automatic-telescoping/service-auto-scaling'
+        //       ]
+        //     },
+        //     {
+        //       type: 'category',
+        //       label: '组件环境配置',
+        //       link: {
+        //         type: 'doc',
+        //         id: 'use-manual/component-manage/env/index'
+        //       },
+        //       items: [
+        //         'use-manual/component-manage/env/advanced-env'
+        //       ]
+        //     },
+        //     {
+        //       type: 'category',
+        //       label: '组件存储',
+        //       link: {
+        //         type: 'doc',
+        //         id: 'use-manual/component-manage/custom-volume/index'
+        //       },
+        //       items: [
+        //         'use-manual/component-manage/custom-volume/service-volume-custom'
+        //       ]
+        //     },
+        //     'use-manual/component-manage/service-port-domain',
+        //     'use-manual/component-manage/service-plugins',
+        //     {
+        //       type: 'category',
+        //       label: '组件构建源',
+        //       link: {
+        //         type: 'doc',
+        //         id: 'use-manual/component-manage/build-source/index'
+        //       },
+        //       items: [
+        //         'use-manual/component-manage/build-source/change_source_type'
+        //       ]
+        //     },
+        //     'use-manual/component-manage/other/index'
+        //   ]
+        // },
         {
           type: 'category',
           label: '团队管理',
@@ -272,43 +290,6 @@ const sidebars = {
             id: 'use-manual/team-manage/index'
           },
           items: [
-            {
-              type: 'category',
-              label: '网关',
-              link: {
-                type: 'doc',
-                id: 'use-manual/team-manage/gateway/index'
-              },
-              items: [
-                {
-                  type: 'category',
-                  label: '访问策略管理',
-                  link: {
-                    type: 'doc',
-                    id: 'use-manual/team-manage/gateway/rules/index'
-                  },
-                  items: [
-                    'use-manual/team-manage/gateway/rules/domain',
-                    'use-manual/team-manage/gateway/rules/tcpip',
-                  ]
-                },
-                'use-manual/team-manage/gateway/certs/index',
-              ]
-            },
-            {
-              type: 'category',
-              label: '插件',
-              link: {
-                type: 'doc',
-                id: 'use-manual/team-manage/plugin-manage/index'
-              },
-              items: [
-                'use-manual/team-manage/plugin-manage/plugin-design-develop',
-                'use-manual/team-manage/plugin-manage/mesh-plugin',
-                'use-manual/team-manage/plugin-manage/new-plugin',
-                'use-manual/team-manage/plugin-manage/tcm-plugin',
-              ]
-            },
           ]
         },
         // {
@@ -362,18 +343,6 @@ const sidebars = {
             'ops-guide/management/custom-shared-storage',
             'ops-guide/management/switch-registry',
             'ops-guide/management/reset-admin-password',
-          ]
-        },
-        {
-          type: 'category',
-          label: '存储解决方案',
-          link: {
-            type: 'doc',
-            id: 'ops-guide/storage/index'
-          },
-          items: [
-            'ops-guide/storage/ali-disk',
-            'ops-guide/storage/change-nfs'
           ]
         },
         {
@@ -440,71 +409,6 @@ const sidebars = {
         },
       ],
     },
-    // {
-    //   type: 'category',
-    //   label: '企业版使用手册',
-    //   link: {
-    //     type: 'doc',
-    //     id: 'enterprise/index'
-    //   },
-    //   items: [
-    //     {
-    //       type: 'category',
-    //       label: '可观测性中心',
-    //       link: {
-    //         type: 'doc',
-    //         id: 'enterprise/observability/index',
-    //       },
-    //       items: [
-    //         'enterprise/observability/dashboard',
-    //         'enterprise/observability/large-screen',
-    //         'enterprise/observability/global-logs',
-    //         'enterprise/observability/alarm',
-    //       ]
-    //     },
-    //     {
-    //       type: 'category',
-    //       label: '微服务治理',
-    //       link: {
-    //         type: 'doc',
-    //         id: 'enterprise/microservices/index',
-    //       },
-    //       items: [
-    //         'enterprise/microservices/springcloud',
-    //         'enterprise/microservices/istio',
-    //       ]
-    //     },
-    //     'enterprise/xinchuang',
-    //     'enterprise/gray-release',
-    //     'enterprise/scanner',
-    //     {
-    //       type: 'category',
-    //       label: '安全能力',
-    //       link: {
-    //         type: 'doc',
-    //         id: 'enterprise/security/index',
-    //       },
-    //       items: [
-    //         'enterprise/security/waf',
-    //         'enterprise/security/audit',
-    //       ]
-    //     },
-    //     'enterprise/style',
-    //     'enterprise/GPU',
-    //     {
-    //       type: 'category',
-    //       label: '其他功能',
-    //       link: {
-    //         type: 'doc',
-    //         id: 'enterprise/other/index',
-    //       },
-    //       items: [
-    //         'enterprise/other/team-resource',
-    //         'enterprise/other/file-manage',
-    //       ]
-    //     },
-    //   ]
-    // },
   ],
   api: [
     'api/Intro',

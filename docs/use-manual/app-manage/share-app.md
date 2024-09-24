@@ -1,6 +1,6 @@
 ---
-title: 应用发布
-description: 讲解应用上云平台应用发布功能说明
+title: 发布应用
+description: 讲解应用上云平台应用发布功能
 ---
 
 应用市场定义了支持大型分布式的数字化业务系统的标准云原生应用模型、它可以包含1-N个服务组件，模型包含其中每个服务组件资源及配置，插件资源及配置，拓扑关系、部署关系等。精心制作完成即可一键发布、一键安装。
@@ -20,13 +20,11 @@ description: 讲解应用上云平台应用发布功能说明
 
 > 提示：发布应用时，应用内所有组件的状态必须为运行中
 
-![](https://grstatic.oss-cn-shanghai.aliyuncs.com/images/docs/5.2/user-manual/app-manage/share-app/Application%20Publishing.png)
-
-![](https://grstatic.oss-cn-shanghai.aliyuncs.com/images/docs/5.2/user-manual/app-manage/share-app/Local%20release.png)
+![img.png](img.png)
 
 **完善应用信息**
 
-![](https://grstatic.oss-cn-shanghai.aliyuncs.com/images/docs/5.2/user-manual/app-manage/share-app/edit.png)
+![img_1.png](img_1.png)
 
 > 填写应用基本信息
 
@@ -54,11 +52,7 @@ description: 讲解应用上云平台应用发布功能说明
 
 **确认发布**
 
-当应用中的所有组件及插件全部完成同步后，点击 `确认发布`，即可完成应用发布。发布成功后可在 `团队视图` 下的 `创建-->基于应用市场创建组件` 中对应的范围下看到你发布的应用。
-
-![](https://grstatic.oss-cn-shanghai.aliyuncs.com/images/docs/5.2/user-manual/app-manage/share-app/Application%20sync.png)
-
-![](https://grstatic.oss-cn-shanghai.aliyuncs.com/images/docs/5.2/user-manual/app-manage/share-app/nginx.png)
+当应用中的所有组件及插件全部完成同步后，点击 `确认发布`，即可完成应用发布。发布成功后可在 `团队视图` 下的 `组件库` 中对应的范围下看到你发布的应用。
 
 **编辑应用发布信息**
 

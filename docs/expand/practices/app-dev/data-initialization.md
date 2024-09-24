@@ -34,13 +34,11 @@ Rainbond 的插件机制中，有对 init 容器的天然支持 —— 初始化
 
 #### 1. 新建插件
 
-<img src="https://static.goodrain.com/docs/5.3/practices/app-dev/data-initialization/data-initialization-1.jpeg" width="100%" title="新建插件" /> 
-
-
+![img.png](img.png)
 
 #### 2. 填写构建源信息
 
-<img src="https://static.goodrain.com/docs/5.3/practices/app-dev/data-initialization/data-initialization-2.jpeg" width="100%" title="构建源信息" />
+![img_1.png](img_1.png)
 
 关键信息包括：
 
@@ -55,13 +53,7 @@ Rainbond 的插件机制中，有对 init 容器的天然支持 —— 初始化
 
 这一步，我们需要声明这个插件都可以接收什么样的配置。从概述一节中，我们知道这个插件正常工作时需要定义几个环境变量的。
 
-进入配置组管理处，添加一组配置：
-
-<img src="https://static.goodrain.com/docs/5.3/practices/app-dev/data-initialization/data-initialization-3.png" width="100%" title="声明插件配置" />
-
-保存配置后，插件就做好了。
-
-
+进入配置组管理处，添加一组配置，保存配置后，插件就做好了。
 
 ### 如何使用插件
 
@@ -76,9 +68,6 @@ Rainbond 的插件机制中，有对 init 容器的天然支持 —— 初始化
 
 - 为服务组件安装已经制作好的 通用数据初始化插件。
 - 查看配置，输入初始化数据包的下载地址(FILE_URL)、目标持久化目录(FILE_PATH)、锁文件保存目录(LOCK_PATH)之后，更新配置。
-
-<img src="https://static.goodrain.com/docs/5.3/practices/app-dev/data-initialization/data-initialization-4.png" width="100%" title="配置插件" />
-
 - 更新内存，由于初始化类型插件在运行结束后会自动退出，所以大家不用担心占据资源过大的情况。内存值的设定可以尽量放大，以稍微大于持久化数据包的大小为宜。这会加快下载以及解压的速度。
 
 
