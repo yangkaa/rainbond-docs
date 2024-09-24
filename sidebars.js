@@ -46,7 +46,7 @@ const sidebars = {
             {
               type: 'doc',
               label: '网关管理',
-              id: 'use-manual/team-manage/gateway/rules/domain',
+              id: 'use-manual/app-manage/gateway',
             },
             {
               type: 'category',
