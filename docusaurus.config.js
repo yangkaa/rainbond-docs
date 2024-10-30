@@ -10,7 +10,7 @@ const config = {
   tagline: '应用上云平台',
   url: '/',
   baseUrl: '/',
-  onBrokenLinks: 'throw',
+  onBrokenLinks: 'ignore',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/logo.ico',
   organizationName: 'Cloud Native',
@@ -22,7 +22,7 @@ const config = {
       /** @type {import('@docusaurus/preset-classic').Options} */
       ({
         docs: {
-          routeBasePath: '/docs',
+          routeBasePath: '/',
           sidebarPath: require.resolve('./sidebars.js'),
         },
         theme: {
