@@ -309,6 +309,39 @@ const sidebars = {
     },
     {
       type: 'category',
+      label: '管理端使用手册',
+      link: {
+        type: 'doc',
+        id: 'admin-manual/index'
+      },
+      items: [
+        'admin-manual/app-market',
+        'admin-manual/team',
+        'admin-manual/cluster',
+        'admin-manual/user',
+        'admin-manual/review',
+        'admin-manual/log',
+        {
+          type: 'category',
+          label: '企业设置',
+          link: {
+            type: 'doc',
+            id: 'admin-manual/enterprise/index'
+          },
+          items: [
+            'admin-manual/enterprise/basic-settings',
+            'admin-manual/enterprise/admin-manage',
+            'admin-manual/enterprise/default-quota',
+            'admin-manual/enterprise/custom-config',
+            'admin-manual/enterprise/component-version',
+            'admin-manual/enterprise/tag-manage',
+            'admin-manual/enterprise/quota-apply'
+          ]
+        }
+      ]
+    },
+    {
+      type: 'category',
       label: '运维手册',
       link: {
         type: 'doc',
@@ -374,9 +407,9 @@ const sidebars = {
     {
       type: 'category',
       label: '常见问题',
-      link: { 
-        type: 'doc', 
-        id: 'troubleshooting/index' 
+      link: {
+        type: 'doc',
+        id: 'troubleshooting/index'
       },
       items: [
         {
