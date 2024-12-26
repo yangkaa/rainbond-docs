@@ -40,6 +40,7 @@ const sidebars = {
               items: [
                 'use-manual/app-manage/overview/app-topology',
                 'use-manual/app-manage/overview/operation',
+                'use-manual/app-manage/overview/auto-build',
               ]
             },
             'use-manual/app-manage/share-app',
