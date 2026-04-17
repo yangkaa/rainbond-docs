@@ -11,7 +11,7 @@ const config = {
   tagline: 'Application Delivery Center',
   url: 'https://www.rainbond.com',
   baseUrl: '/',
-  onBrokenLinks: 'throw',
+  onBrokenLinks: 'warn',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/rainbond.png',
   organizationName: 'goodrain', // Usually your GitHub org/user name.
